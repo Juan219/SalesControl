@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E81C1BBB1D1A4AAD006547C6 /* AccountKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E81C1BB81D1A4AAD006547C6 /* AccountKit.framework */; };
+		E81C1BBC1D1A4AAD006547C6 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E81C1BB91D1A4AAD006547C6 /* FBSDKCoreKit.framework */; };
+		E81C1BBD1D1A4AAD006547C6 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E81C1BBA1D1A4AAD006547C6 /* FBSDKLoginKit.framework */; };
+		E81C1BC01D1A6823006547C6 /* SaleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E81C1BBF1D1A6823006547C6 /* SaleCell.swift */; };
+		E81C1BC21D1A6849006547C6 /* SaleCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E81C1BC11D1A6849006547C6 /* SaleCell.xib */; };
+		E81C1BC51D1A6ABD006547C6 /* Sale.swift in Sources */ = {isa = PBXBuildFile; fileRef = E81C1BC41D1A6ABD006547C6 /* Sale.swift */; };
 		E8AE4A4C1D18F2AE00610C20 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8AE4A4B1D18F2AE00610C20 /* AppDelegate.swift */; };
 		E8AE4A4E1D18F2AE00610C20 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8AE4A4D1D18F2AE00610C20 /* ViewController.swift */; };
 		E8AE4A511D18F2AE00610C20 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E8AE4A4F1D18F2AE00610C20 /* Main.storyboard */; };
@@ -14,9 +20,6 @@
 		E8AE4A561D18F2AE00610C20 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E8AE4A541D18F2AE00610C20 /* LaunchScreen.storyboard */; };
 		E8AE4A611D18F2AE00610C20 /* SalesControlTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8AE4A601D18F2AE00610C20 /* SalesControlTests.swift */; };
 		E8AE4A6C1D18F2AE00610C20 /* SalesControlUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8AE4A6B1D18F2AE00610C20 /* SalesControlUITests.swift */; };
-		E8AE4A7F1D1A0CCA00610C20 /* AccountKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E8AE4A7E1D1A0CCA00610C20 /* AccountKit.framework */; };
-		E8AE4A811D1A0E1500610C20 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E8AE4A801D1A0E1500610C20 /* FBSDKLoginKit.framework */; };
-		E8AE4A831D1A104400610C20 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E8AE4A821D1A104400610C20 /* FBSDKCoreKit.framework */; };
 		E8AE4A861D1A1F7F00610C20 /* MainNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8AE4A851D1A1F7F00610C20 /* MainNavigationController.swift */; };
 		E8EE14C41D1A298C007ABDE8 /* Locksmith.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E8EE14C31D1A298C007ABDE8 /* Locksmith.framework */; };
 		E8EE14C71D1A29D0007ABDE8 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8EE14C61D1A29D0007ABDE8 /* MainTabBarController.swift */; };
@@ -65,6 +68,12 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		E81C1BB81D1A4AAD006547C6 /* AccountKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AccountKit.framework; sourceTree = "<group>"; };
+		E81C1BB91D1A4AAD006547C6 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
+		E81C1BBA1D1A4AAD006547C6 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
+		E81C1BBF1D1A6823006547C6 /* SaleCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SaleCell.swift; path = Cells/SaleCell.swift; sourceTree = "<group>"; };
+		E81C1BC11D1A6849006547C6 /* SaleCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = SaleCell.xib; path = Cells/SaleCell.xib; sourceTree = "<group>"; };
+		E81C1BC41D1A6ABD006547C6 /* Sale.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Sale.swift; path = Classes/Sale.swift; sourceTree = "<group>"; };
 		E8AE4A481D18F2AE00610C20 /* SalesControl.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SalesControl.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E8AE4A4B1D18F2AE00610C20 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E8AE4A4D1D18F2AE00610C20 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -78,9 +87,6 @@
 		E8AE4A671D18F2AE00610C20 /* SalesControlUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SalesControlUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E8AE4A6B1D18F2AE00610C20 /* SalesControlUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SalesControlUITests.swift; sourceTree = "<group>"; };
 		E8AE4A6D1D18F2AE00610C20 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E8AE4A7E1D1A0CCA00610C20 /* AccountKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AccountKit.framework; sourceTree = "<group>"; };
-		E8AE4A801D1A0E1500610C20 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
-		E8AE4A821D1A104400610C20 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
 		E8AE4A841D1A10DF00610C20 /* SalesControl-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SalesControl-Bridging-Header.h"; sourceTree = "<group>"; };
 		E8AE4A851D1A1F7F00610C20 /* MainNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainNavigationController.swift; sourceTree = "<group>"; };
 		E8EE14C31D1A298C007ABDE8 /* Locksmith.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Locksmith.framework; sourceTree = "<group>"; };
@@ -92,11 +98,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E81C1BBB1D1A4AAD006547C6 /* AccountKit.framework in Frameworks */,
+				E81C1BBC1D1A4AAD006547C6 /* FBSDKCoreKit.framework in Frameworks */,
+				E81C1BBD1D1A4AAD006547C6 /* FBSDKLoginKit.framework in Frameworks */,
 				E8EE14CB1D1A2FF0007ABDE8 /* Locksmith.framework in Frameworks */,
-				E8AE4A811D1A0E1500610C20 /* FBSDKLoginKit.framework in Frameworks */,
 				E8EE14C41D1A298C007ABDE8 /* Locksmith.framework in Frameworks */,
-				E8AE4A831D1A104400610C20 /* FBSDKCoreKit.framework in Frameworks */,
-				E8AE4A7F1D1A0CCA00610C20 /* AccountKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -117,6 +123,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E81C1BBE1D1A67D1006547C6 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				E81C1BBF1D1A6823006547C6 /* SaleCell.swift */,
+				E81C1BC11D1A6849006547C6 /* SaleCell.xib */,
+			);
+			name = Cells;
+			sourceTree = "<group>";
+		};
+		E81C1BC31D1A6A9C006547C6 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				E81C1BC41D1A6ABD006547C6 /* Sale.swift */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		E81C1BC61D1A6ACC006547C6 /* MainNavigationController */ = {
+			isa = PBXGroup;
+			children = (
+				E8AE4A851D1A1F7F00610C20 /* MainNavigationController.swift */,
+			);
+			name = MainNavigationController;
+			sourceTree = "<group>";
+		};
 		E8AE4A3F1D18F2AE00610C20 = {
 			isa = PBXGroup;
 			children = (
@@ -141,9 +172,11 @@
 		E8AE4A4A1D18F2AE00610C20 /* SalesControl */ = {
 			isa = PBXGroup;
 			children = (
+				E81C1BC61D1A6ACC006547C6 /* MainNavigationController */,
+				E81C1BC31D1A6A9C006547C6 /* Classes */,
+				E81C1BBE1D1A67D1006547C6 /* Cells */,
 				E8EE14C51D1A29A5007ABDE8 /* MainTabBarController */,
 				E8AE4A4B1D18F2AE00610C20 /* AppDelegate.swift */,
-				E8AE4A851D1A1F7F00610C20 /* MainNavigationController.swift */,
 				E8AE4A841D1A10DF00610C20 /* SalesControl-Bridging-Header.h */,
 				E8AE4A4D1D18F2AE00610C20 /* ViewController.swift */,
 				E8AE4A4F1D18F2AE00610C20 /* Main.storyboard */,
@@ -175,10 +208,10 @@
 		E8AE4A7D1D1A0CAF00610C20 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				E81C1BB81D1A4AAD006547C6 /* AccountKit.framework */,
+				E81C1BB91D1A4AAD006547C6 /* FBSDKCoreKit.framework */,
+				E81C1BBA1D1A4AAD006547C6 /* FBSDKLoginKit.framework */,
 				E8EE14C31D1A298C007ABDE8 /* Locksmith.framework */,
-				E8AE4A821D1A104400610C20 /* FBSDKCoreKit.framework */,
-				E8AE4A801D1A0E1500610C20 /* FBSDKLoginKit.framework */,
-				E8AE4A7E1D1A0CCA00610C20 /* AccountKit.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -302,6 +335,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E81C1BC21D1A6849006547C6 /* SaleCell.xib in Resources */,
 				E8AE4A561D18F2AE00610C20 /* LaunchScreen.storyboard in Resources */,
 				E8AE4A531D18F2AE00610C20 /* Assets.xcassets in Resources */,
 				E8AE4A511D18F2AE00610C20 /* Main.storyboard in Resources */,
@@ -410,6 +444,8 @@
 				E8AE4A861D1A1F7F00610C20 /* MainNavigationController.swift in Sources */,
 				E8AE4A4E1D18F2AE00610C20 /* ViewController.swift in Sources */,
 				E8EE14C71D1A29D0007ABDE8 /* MainTabBarController.swift in Sources */,
+				E81C1BC01D1A6823006547C6 /* SaleCell.swift in Sources */,
+				E81C1BC51D1A6ABD006547C6 /* Sale.swift in Sources */,
 				E8AE4A4C1D18F2AE00610C20 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

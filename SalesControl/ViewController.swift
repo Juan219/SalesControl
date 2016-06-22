@@ -8,16 +8,33 @@
 
 import UIKit
 
-class ViewController: UIViewController,FBSDKLoginButtonDelegate{
+class ViewController: UIViewController,FBSDKLoginButtonDelegate,FBSDKGraphRequestConnectionDelegate {
 
-    private var uuid: NSUUID?
+    private var uuid: String?
+    @IBOutlet weak var facebookImageView: UIImageView!
+    @IBOutlet weak var facebookUserNameLabel: UILabel!
+    @IBOutlet weak var twitterImageView: UIImageView!
+    @IBOutlet weak var twitterUserNameLabel: UILabel!
+    @IBOutlet weak var googleplusImageView: UIImageView!
+    @IBOutlet weak var googleplusUserNameLabel: UILabel!
+    
 
     @IBOutlet weak var FBLoginButton: FBSDKLoginButton!
     override func viewDidLoad() {
         super.viewDidLoad()
-        //FBLoginButton.delegate = self
-        //FBLoginButton.readPermissions = ["public_profile", "email", "user_friends"]
-}
+        startView()
+        FBLoginButton.delegate = self
+        FBLoginButton.readPermissions = ["public_profile", "email", "user_friends"]
+    }
+
+    func startView() {
+        facebookImageView.hidden = true
+        facebookUserNameLabel.hidden = true
+        twitterImageView.hidden = true
+        twitterUserNameLabel.hidden = true
+        googleplusImageView.hidden = true
+        googleplusUserNameLabel.hidden = true
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -26,16 +43,40 @@ class ViewController: UIViewController,FBSDKLoginButtonDelegate{
 
     func loginButton(loginButton: FBSDKLoginButton!, didCompleteWithResult result: FBSDKLoginManagerLoginResult!, error: NSError!) {
 
-        let facebookData : [String : AnyObject] = ["facebookToken" : result.token]
+        if (FBSDKAccessToken.currentAccessToken() != nil) {
 
-        let facebookAccountData : String = "facebookAccountData"
-        do { try Locksmith.saveData(facebookData, forUserAccount: facebookAccountData) }
-        catch {
-            print("Error to save the facebook credentials")
+            var accountInfo = FBSDKGraphRequest(graphPath: "me", parameters: ["fields":"id,email,name,cover"])
+
+            accountInfo.startWithCompletionHandler({ (connection, result, error) -> Void in
+
+                self.facebookUserNameLabel.hidden = false
+                self.facebookUserNameLabel.text = String(result.valueForKey("name")!)
+
+                if let data = NSData(contentsOfURL: NSURL(string: result.valueForKey("cover")?.valueForKey("source") as! String)!) {
+                    let image = UIImage(data: data)
+
+
+
+                    UIView.animateWithDuration(1, animations: { () in
+                        self.FBLoginButton.frame.size.width = 0
+                        self.facebookImageView.image = image
+
+                        }, completion: { (value: Bool) in
+                            self.FBLoginButton.hidden = true
+                            self.facebookImageView.hidden = false
+                    })
+                }
+
+
+
+            })
+
         }
 
-        print(result)
-        dismissViewControllerAnimated(true, completion: nil)
+    }
+
+    func requestConnectionDidFinishLoading(connection: FBSDKGraphRequestConnection!) {
+        print("")
     }
 
     func loginButtonDidLogOut(loginButton: FBSDKLoginButton!) {
@@ -48,8 +89,9 @@ class ViewController: UIViewController,FBSDKLoginButtonDelegate{
     }
 
     func getDataIdentifier() {
-         
+        let defaults = NSUserDefaults.standardUserDefaults()
 
+        
     }
 
 
