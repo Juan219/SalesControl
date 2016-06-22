@@ -14,6 +14,14 @@
 		E8AE4A561D18F2AE00610C20 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E8AE4A541D18F2AE00610C20 /* LaunchScreen.storyboard */; };
 		E8AE4A611D18F2AE00610C20 /* SalesControlTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8AE4A601D18F2AE00610C20 /* SalesControlTests.swift */; };
 		E8AE4A6C1D18F2AE00610C20 /* SalesControlUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8AE4A6B1D18F2AE00610C20 /* SalesControlUITests.swift */; };
+		E8AE4A7F1D1A0CCA00610C20 /* AccountKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E8AE4A7E1D1A0CCA00610C20 /* AccountKit.framework */; };
+		E8AE4A811D1A0E1500610C20 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E8AE4A801D1A0E1500610C20 /* FBSDKLoginKit.framework */; };
+		E8AE4A831D1A104400610C20 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E8AE4A821D1A104400610C20 /* FBSDKCoreKit.framework */; };
+		E8AE4A861D1A1F7F00610C20 /* MainNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8AE4A851D1A1F7F00610C20 /* MainNavigationController.swift */; };
+		E8EE14C41D1A298C007ABDE8 /* Locksmith.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E8EE14C31D1A298C007ABDE8 /* Locksmith.framework */; };
+		E8EE14C71D1A29D0007ABDE8 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8EE14C61D1A29D0007ABDE8 /* MainTabBarController.swift */; };
+		E8EE14CB1D1A2FF0007ABDE8 /* Locksmith.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E8EE14C31D1A298C007ABDE8 /* Locksmith.framework */; };
+		E8EE14CC1D1A2FF0007ABDE8 /* Locksmith.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E8EE14C31D1A298C007ABDE8 /* Locksmith.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,6 +41,29 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		E8EE14CA1D1A2F8B007ABDE8 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 7;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E8EE14CD1D1A2FF0007ABDE8 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				E8EE14CC1D1A2FF0007ABDE8 /* Locksmith.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		E8AE4A481D18F2AE00610C20 /* SalesControl.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SalesControl.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E8AE4A4B1D18F2AE00610C20 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -47,6 +78,13 @@
 		E8AE4A671D18F2AE00610C20 /* SalesControlUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SalesControlUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E8AE4A6B1D18F2AE00610C20 /* SalesControlUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SalesControlUITests.swift; sourceTree = "<group>"; };
 		E8AE4A6D1D18F2AE00610C20 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E8AE4A7E1D1A0CCA00610C20 /* AccountKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AccountKit.framework; sourceTree = "<group>"; };
+		E8AE4A801D1A0E1500610C20 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
+		E8AE4A821D1A104400610C20 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
+		E8AE4A841D1A10DF00610C20 /* SalesControl-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SalesControl-Bridging-Header.h"; sourceTree = "<group>"; };
+		E8AE4A851D1A1F7F00610C20 /* MainNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainNavigationController.swift; sourceTree = "<group>"; };
+		E8EE14C31D1A298C007ABDE8 /* Locksmith.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Locksmith.framework; sourceTree = "<group>"; };
+		E8EE14C61D1A29D0007ABDE8 /* MainTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +92,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E8EE14CB1D1A2FF0007ABDE8 /* Locksmith.framework in Frameworks */,
+				E8AE4A811D1A0E1500610C20 /* FBSDKLoginKit.framework in Frameworks */,
+				E8EE14C41D1A298C007ABDE8 /* Locksmith.framework in Frameworks */,
+				E8AE4A831D1A104400610C20 /* FBSDKCoreKit.framework in Frameworks */,
+				E8AE4A7F1D1A0CCA00610C20 /* AccountKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -77,6 +120,7 @@
 		E8AE4A3F1D18F2AE00610C20 = {
 			isa = PBXGroup;
 			children = (
+				E8AE4A7D1D1A0CAF00610C20 /* Frameworks */,
 				E8AE4A4A1D18F2AE00610C20 /* SalesControl */,
 				E8AE4A5F1D18F2AE00610C20 /* SalesControlTests */,
 				E8AE4A6A1D18F2AE00610C20 /* SalesControlUITests */,
@@ -97,7 +141,10 @@
 		E8AE4A4A1D18F2AE00610C20 /* SalesControl */ = {
 			isa = PBXGroup;
 			children = (
+				E8EE14C51D1A29A5007ABDE8 /* MainTabBarController */,
 				E8AE4A4B1D18F2AE00610C20 /* AppDelegate.swift */,
+				E8AE4A851D1A1F7F00610C20 /* MainNavigationController.swift */,
+				E8AE4A841D1A10DF00610C20 /* SalesControl-Bridging-Header.h */,
 				E8AE4A4D1D18F2AE00610C20 /* ViewController.swift */,
 				E8AE4A4F1D18F2AE00610C20 /* Main.storyboard */,
 				E8AE4A521D18F2AE00610C20 /* Assets.xcassets */,
@@ -125,6 +172,25 @@
 			path = SalesControlUITests;
 			sourceTree = "<group>";
 		};
+		E8AE4A7D1D1A0CAF00610C20 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E8EE14C31D1A298C007ABDE8 /* Locksmith.framework */,
+				E8AE4A821D1A104400610C20 /* FBSDKCoreKit.framework */,
+				E8AE4A801D1A0E1500610C20 /* FBSDKLoginKit.framework */,
+				E8AE4A7E1D1A0CCA00610C20 /* AccountKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E8EE14C51D1A29A5007ABDE8 /* MainTabBarController */ = {
+			isa = PBXGroup;
+			children = (
+				E8EE14C61D1A29D0007ABDE8 /* MainTabBarController.swift */,
+			);
+			name = MainTabBarController;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -135,6 +201,8 @@
 				E8AE4A441D18F2AE00610C20 /* Sources */,
 				E8AE4A451D18F2AE00610C20 /* Frameworks */,
 				E8AE4A461D18F2AE00610C20 /* Resources */,
+				E8EE14CA1D1A2F8B007ABDE8 /* CopyFiles */,
+				E8EE14CD1D1A2FF0007ABDE8 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -149,9 +217,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E8AE4A731D18F2AE00610C20 /* Build configuration list for PBXNativeTarget "SalesControlTests" */;
 			buildPhases = (
+				D76B20B09B5FFC005D3B1902 /* [CP] Check Pods Manifest.lock */,
 				E8AE4A581D18F2AE00610C20 /* Sources */,
 				E8AE4A591D18F2AE00610C20 /* Frameworks */,
 				E8AE4A5A1D18F2AE00610C20 /* Resources */,
+				B5035981AED82BAA370411AB /* [CP] Embed Pods Frameworks */,
+				F8144566229CBA11B4BCDD08 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -167,9 +238,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E8AE4A761D18F2AE00610C20 /* Build configuration list for PBXNativeTarget "SalesControlUITests" */;
 			buildPhases = (
+				AA8A6E3A30DEF92A2FF17387 /* [CP] Check Pods Manifest.lock */,
 				E8AE4A631D18F2AE00610C20 /* Sources */,
 				E8AE4A641D18F2AE00610C20 /* Frameworks */,
 				E8AE4A651D18F2AE00610C20 /* Resources */,
+				E86FC4ACCB427C1FB4976DAA /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -251,12 +324,92 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		AA8A6E3A30DEF92A2FF17387 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		B5035981AED82BAA370411AB /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SalesControlTests/Pods-SalesControlTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D76B20B09B5FFC005D3B1902 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		E86FC4ACCB427C1FB4976DAA /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SalesControlUITests/Pods-SalesControlUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F8144566229CBA11B4BCDD08 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SalesControlTests/Pods-SalesControlTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		E8AE4A441D18F2AE00610C20 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E8AE4A861D1A1F7F00610C20 /* MainNavigationController.swift in Sources */,
 				E8AE4A4E1D18F2AE00610C20 /* ViewController.swift in Sources */,
+				E8EE14C71D1A29D0007ABDE8 /* MainTabBarController.swift in Sources */,
 				E8AE4A4C1D18F2AE00610C20 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -401,10 +554,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+					"/Users/{username}/Documents/FacebookSDK",
+				);
 				INFOPLIST_FILE = SalesControl/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = example.SalesControl;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "SalesControl/SalesControl-Bridging-Header.h";
 			};
 			name = Debug;
 		};
@@ -412,10 +571,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+					"/Users/{username}/Documents/FacebookSDK",
+				);
 				INFOPLIST_FILE = SalesControl/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = example.SalesControl;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "SalesControl/SalesControl-Bridging-Header.h";
 			};
 			name = Release;
 		};
@@ -484,6 +649,7 @@
 				E8AE4A721D18F2AE00610C20 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E8AE4A731D18F2AE00610C20 /* Build configuration list for PBXNativeTarget "SalesControlTests" */ = {
 			isa = XCConfigurationList;
@@ -492,6 +658,7 @@
 				E8AE4A751D18F2AE00610C20 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E8AE4A761D18F2AE00610C20 /* Build configuration list for PBXNativeTarget "SalesControlUITests" */ = {
 			isa = XCConfigurationList;
@@ -500,6 +667,7 @@
 				E8AE4A781D18F2AE00610C20 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

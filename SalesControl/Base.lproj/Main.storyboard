@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="NzW-hd-O1y">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SalesControl" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +16,158 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yen-zb-YwW">
+                                <rect key="frame" x="380" y="440" width="60" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="hNb-Om-AUs"/>
+                                    <constraint firstAttribute="height" constant="60" id="vWS-OC-gyD"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="google-plus-512"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4tg-d8-mw3">
+                                <rect key="frame" x="270" y="440" width="60" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="EMm-uu-PsB"/>
+                                    <constraint firstAttribute="width" constant="60" id="tqn-2c-Qvf"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="twitter-xxl"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sales Control" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xaX-O3-jJi">
+                                <rect key="frame" x="150" y="80" width="300" height="58.5"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="50"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QWW-cw-Xps">
+                                <rect key="frame" x="160" y="440" width="60" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="9jj-oa-8AF"/>
+                                    <constraint firstAttribute="width" constant="60" id="gDN-pb-enR"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="facebook-xl"/>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="xaX-O3-jJi" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="7XF-K3-g93"/>
+                            <constraint firstItem="Yen-zb-YwW" firstAttribute="leading" secondItem="4tg-d8-mw3" secondAttribute="trailing" constant="50" id="Hx8-TZ-dSb"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="4tg-d8-mw3" secondAttribute="bottom" constant="100" id="N5h-Ug-ctE"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="QWW-cw-Xps" secondAttribute="bottom" constant="100" id="Wrj-Fl-WYb"/>
+                            <constraint firstItem="xaX-O3-jJi" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="16" id="eaZ-RH-9VW"/>
+                            <constraint firstItem="4tg-d8-mw3" firstAttribute="leading" secondItem="QWW-cw-Xps" secondAttribute="trailing" constant="50" id="m3v-Hn-C29"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Yen-zb-YwW" secondAttribute="bottom" constant="100" id="nHy-zn-i4c"/>
+                            <constraint firstItem="4tg-d8-mw3" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="yz1-Hh-3nI"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="52T-jd-XWH"/>
+                    <connections>
+                        <outlet property="FBLoginButton" destination="QWW-cw-Xps" id="t51-km-W3T"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="516" y="843"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="Ncp-Lq-Fth">
+            <objects>
+                <tableViewController storyboardIdentifier="SalesTableViewController" id="IPX-uO-rGU" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="kyY-Zx-NIU">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="QcW-Ed-LBF">
+                                <rect key="frame" x="0.0" y="28" width="600" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="QcW-Ed-LBF" id="lgq-gX-B9f">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="IPX-uO-rGU" id="kW1-fg-fOT"/>
+                            <outlet property="delegate" destination="IPX-uO-rGU" id="oCv-Gv-Zac"/>
+                        </connections>
+                    </tableView>
+                    <tabBarItem key="tabBarItem" title="Item" id="mys-qA-Pcp"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="y74-g3-WwH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1926" y="-363"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="Qe8-qJ-D5K">
+            <objects>
+                <tableViewController storyboardIdentifier="VendorsTableViewController" id="Fp7-MG-U4p" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="hue-m1-LDE">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="Dc9-rs-LEw">
+                                <rect key="frame" x="0.0" y="28" width="600" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Dc9-rs-LEw" id="Gku-Xv-Fl5">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="Fp7-MG-U4p" id="jui-2U-zNw"/>
+                            <outlet property="delegate" destination="Fp7-MG-U4p" id="5OA-oD-Yaf"/>
+                        </connections>
+                    </tableView>
+                    <tabBarItem key="tabBarItem" title="Item" id="uwL-Da-VZn"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="36G-Me-LeH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1926" y="496"/>
+        </scene>
+        <!--Main Tab Bar Controller-->
+        <scene sceneID="Fa7-6Y-vgw">
+            <objects>
+                <tabBarController id="Zal-Z6-w1Q" customClass="MainTabBarController" customModule="SalesControl" customModuleProvider="target" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="G0C-zE-5nA"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="SeG-ME-UqZ">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="IPX-uO-rGU" kind="relationship" relationship="viewControllers" id="vkR-EX-1jf"/>
+                        <segue destination="Fp7-MG-U4p" kind="relationship" relationship="viewControllers" id="A4u-PZ-9HZ"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vlX-3N-MsV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="912" y="109"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="9SE-oe-U1o">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="NzW-hd-O1y" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="eW2-Zy-PPm">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="BnK-hw-8xc"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HBA-0d-SBc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="8" y="-59"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="facebook-xl" width="64" height="64"/>
+        <image name="google-plus-512" width="512" height="512"/>
+        <image name="twitter-xxl" width="256" height="256"/>
+    </resources>
 </document>
