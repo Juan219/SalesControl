@@ -1,0 +1,20 @@
+{
+    "purchase": [{
+                 "id": "000001",
+                 "date": "2016-06-25T00:00:00.000Z",
+                 "product": {
+                 "name": "Agua embotellada",
+                 "quantity": "1",
+                 "vendor": {
+                 "id": "100001",
+                 "name": "Oxxo",
+                 "imgURL": "\"www.oxxo.com\"",
+                 "socialNetworksURLs": {
+                 "twitter": "www.twitter.com",
+                 "facebook": "www.facebook.com",
+                 "googleplus": "www.googleplus.com"
+                 }
+                 }
+                 }
+                 }]
+}

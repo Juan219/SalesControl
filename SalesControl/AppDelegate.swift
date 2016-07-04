@@ -1,3 +1,4 @@
+
 //
 //  AppDelegate.swift
 //  SalesControl
@@ -7,6 +8,10 @@
 //
 
 import UIKit
+import Fabric
+import TwitterKit
+import GoogleMaps
+import Google
 
 
 
@@ -18,8 +23,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
-        FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions)
-        return true
+        Fabric.with([Twitter.self])
+        GMSServices.provideAPIKey("AIzaSyCDa_jZlMpyeNuVxPjp3E1GmUW-RNiuXrw")
+
+        var configureError: NSError?
+        GGLContext.sharedInstance().configureWithError(&configureError)
+        assert(configureError == nil, "Error configuring Google services: \(configureError)")
+        
+        return FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions)
+
     }
 
     func applicationWillResignActive(application: UIApplication) {
@@ -45,7 +57,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
 
+    func application(app: UIApplication, openURL url: NSURL, options: [String : AnyObject]) -> Bool {
+        
+        return GIDSignIn.sharedInstance().handleURL(url,
+                                             sourceApplication: options[UIApplicationOpenURLOptionsSourceApplicationKey] as? String,
+                                             annotation: options[UIApplicationOpenURLOptionsAnnotationKey])
+    }
+
     func application(application: UIApplication, openURL url: NSURL, sourceApplication: String?, annotation: AnyObject) -> Bool {
+
         return FBSDKApplicationDelegate.sharedInstance().application(application, openURL: url, sourceApplication: sourceApplication, annotation: annotation)
     }
 
@@ -53,8 +73,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
         let loginVC = storyBoard.instantiateViewControllerWithIdentifier("LoginVC") as? ViewController
 
-        
-
+        self.window?.rootViewController?.presentViewController(loginVC!, animated: true, completion: nil)
     }
 
 }

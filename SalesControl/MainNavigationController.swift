@@ -15,8 +15,6 @@ class MainNavigationController: UINavigationController,UINavigationControllerDel
 
     override func viewDidLoad() {
         //check if the user is loggedIn
-        print("")
+        print("Loading......")
     }
-
-    
 }

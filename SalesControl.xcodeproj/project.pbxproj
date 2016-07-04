@@ -7,12 +7,50 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1119A5C76800585E5CAC7237 /* Pods_SalesControlUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2933AB255EF604831A4A6FAB /* Pods_SalesControlUITests.framework */; };
+		29E2B4EE3998AA2533A550D3 /* Pods_SalesControl.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B004250112D337F2DEE23216 /* Pods_SalesControl.framework */; };
+		3CD26FB6F75BEE3C05A2ADD6 /* Pods_SalesControlTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16872DDE2D53857B0A078B0E /* Pods_SalesControlTests.framework */; };
 		E81C1BBB1D1A4AAD006547C6 /* AccountKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E81C1BB81D1A4AAD006547C6 /* AccountKit.framework */; };
 		E81C1BBC1D1A4AAD006547C6 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E81C1BB91D1A4AAD006547C6 /* FBSDKCoreKit.framework */; };
 		E81C1BBD1D1A4AAD006547C6 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E81C1BBA1D1A4AAD006547C6 /* FBSDKLoginKit.framework */; };
-		E81C1BC01D1A6823006547C6 /* SaleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E81C1BBF1D1A6823006547C6 /* SaleCell.swift */; };
-		E81C1BC21D1A6849006547C6 /* SaleCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E81C1BC11D1A6849006547C6 /* SaleCell.xib */; };
-		E81C1BC51D1A6ABD006547C6 /* Sale.swift in Sources */ = {isa = PBXBuildFile; fileRef = E81C1BC41D1A6ABD006547C6 /* Sale.swift */; };
+		E81C1BC01D1A6823006547C6 /* PurchaseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E81C1BBF1D1A6823006547C6 /* PurchaseCell.swift */; };
+		E81C1BC21D1A6849006547C6 /* PurchaseCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E81C1BC11D1A6849006547C6 /* PurchaseCell.xib */; };
+		E81C1BC51D1A6ABD006547C6 /* Purchase.swift in Sources */ = {isa = PBXBuildFile; fileRef = E81C1BC41D1A6ABD006547C6 /* Purchase.swift */; };
+		E81C1BDA1D1AF844006547C6 /* Taviraj-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E81C1BC81D1AF844006547C6 /* Taviraj-Black.ttf */; };
+		E81C1BDB1D1AF844006547C6 /* Taviraj-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E81C1BC91D1AF844006547C6 /* Taviraj-BlackItalic.ttf */; };
+		E81C1BDC1D1AF844006547C6 /* Taviraj-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E81C1BCA1D1AF844006547C6 /* Taviraj-Bold.ttf */; };
+		E81C1BDD1D1AF844006547C6 /* Taviraj-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E81C1BCB1D1AF844006547C6 /* Taviraj-BoldItalic.ttf */; };
+		E81C1BDE1D1AF844006547C6 /* Taviraj-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E81C1BCC1D1AF844006547C6 /* Taviraj-ExtraBold.ttf */; };
+		E81C1BDF1D1AF844006547C6 /* Taviraj-ExtraBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E81C1BCD1D1AF844006547C6 /* Taviraj-ExtraBoldItalic.ttf */; };
+		E81C1BE01D1AF844006547C6 /* Taviraj-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E81C1BCE1D1AF844006547C6 /* Taviraj-ExtraLight.ttf */; };
+		E81C1BE11D1AF844006547C6 /* Taviraj-ExtraLightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E81C1BCF1D1AF844006547C6 /* Taviraj-ExtraLightItalic.ttf */; };
+		E81C1BE21D1AF844006547C6 /* Taviraj-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E81C1BD01D1AF844006547C6 /* Taviraj-Italic.ttf */; };
+		E81C1BE31D1AF844006547C6 /* Taviraj-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E81C1BD11D1AF844006547C6 /* Taviraj-Light.ttf */; };
+		E81C1BE41D1AF844006547C6 /* Taviraj-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E81C1BD21D1AF844006547C6 /* Taviraj-LightItalic.ttf */; };
+		E81C1BE51D1AF844006547C6 /* Taviraj-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E81C1BD31D1AF844006547C6 /* Taviraj-Medium.ttf */; };
+		E81C1BE61D1AF844006547C6 /* Taviraj-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E81C1BD41D1AF844006547C6 /* Taviraj-MediumItalic.ttf */; };
+		E81C1BE71D1AF844006547C6 /* Taviraj-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E81C1BD51D1AF844006547C6 /* Taviraj-Regular.ttf */; };
+		E81C1BE81D1AF844006547C6 /* Taviraj-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E81C1BD61D1AF844006547C6 /* Taviraj-SemiBold.ttf */; };
+		E81C1BE91D1AF844006547C6 /* Taviraj-SemiBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E81C1BD71D1AF844006547C6 /* Taviraj-SemiBoldItalic.ttf */; };
+		E81C1BEA1D1AF844006547C6 /* Taviraj-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E81C1BD81D1AF844006547C6 /* Taviraj-Thin.ttf */; };
+		E81C1BEB1D1AF844006547C6 /* Taviraj-ThinItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E81C1BD91D1AF844006547C6 /* Taviraj-ThinItalic.ttf */; };
+		E81C1BEE1D1B0A31006547C6 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E81C1BED1D1B0A31006547C6 /* DataService.swift */; };
+		E875A15B1D1B172600B5676C /* Firebase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E875A15A1D1B172600B5676C /* Firebase.framework */; };
+		E875A15D1D1B17D800B5676C /* libicucore.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = E875A15C1D1B17D800B5676C /* libicucore.tbd */; };
+		E875A15F1D1B17E300B5676C /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = E875A15E1D1B17E300B5676C /* libc++.tbd */; };
+		E875A1611D1B17F000B5676C /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E875A1601D1B17F000B5676C /* CFNetwork.framework */; };
+		E875A1631D1B17FA00B5676C /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E875A1621D1B17FA00B5676C /* Security.framework */; };
+		E875A1651D1B180200B5676C /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E875A1641D1B180200B5676C /* SystemConfiguration.framework */; };
+		E875A1671D1B1C7900B5676C /* AccountCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E875A1661D1B1C7900B5676C /* AccountCell.swift */; };
+		E875A1691D1B1CA000B5676C /* AccountCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E875A1681D1B1CA000B5676C /* AccountCell.xib */; };
+		E875A16C1D1B21F200B5676C /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E875A16B1D1B21F200B5676C /* Constants.swift */; };
+		E875A1711D1B4A8D00B5676C /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E875A1701D1B4A8D00B5676C /* Accounts.framework */; };
+		E875A1731D1B4A9300B5676C /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E875A1721D1B4A9300B5676C /* Social.framework */; };
+		E875A1771D1B4C1B00B5676C /* TwitterAuthHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = E875A1761D1B4C1B00B5676C /* TwitterAuthHelper.m */; };
+		E875A17A1D1C41CA00B5676C /* PurchasesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E875A1791D1C41CA00B5676C /* PurchasesTableViewController.swift */; };
+		E875A17C1D1C443500B5676C /* Vendor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E875A17B1D1C443500B5676C /* Vendor.swift */; };
+		E87D58501D1C6B3500F3403B /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E87D584F1D1C6B3500F3403B /* MapViewController.swift */; };
+		E87D58521D1C86C900F3403B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E87D58511D1C86C900F3403B /* GoogleService-Info.plist */; };
 		E8AE4A4C1D18F2AE00610C20 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8AE4A4B1D18F2AE00610C20 /* AppDelegate.swift */; };
 		E8AE4A4E1D18F2AE00610C20 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8AE4A4D1D18F2AE00610C20 /* ViewController.swift */; };
 		E8AE4A511D18F2AE00610C20 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E8AE4A4F1D18F2AE00610C20 /* Main.storyboard */; };
@@ -21,10 +59,13 @@
 		E8AE4A611D18F2AE00610C20 /* SalesControlTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8AE4A601D18F2AE00610C20 /* SalesControlTests.swift */; };
 		E8AE4A6C1D18F2AE00610C20 /* SalesControlUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8AE4A6B1D18F2AE00610C20 /* SalesControlUITests.swift */; };
 		E8AE4A861D1A1F7F00610C20 /* MainNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8AE4A851D1A1F7F00610C20 /* MainNavigationController.swift */; };
-		E8EE14C41D1A298C007ABDE8 /* Locksmith.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E8EE14C31D1A298C007ABDE8 /* Locksmith.framework */; };
 		E8EE14C71D1A29D0007ABDE8 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8EE14C61D1A29D0007ABDE8 /* MainTabBarController.swift */; };
 		E8EE14CB1D1A2FF0007ABDE8 /* Locksmith.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E8EE14C31D1A298C007ABDE8 /* Locksmith.framework */; };
-		E8EE14CC1D1A2FF0007ABDE8 /* Locksmith.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E8EE14C31D1A298C007ABDE8 /* Locksmith.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		E8F062A31D2351E9008BAE9F /* Purchases.json in Resources */ = {isa = PBXBuildFile; fileRef = E8F062A21D2351E9008BAE9F /* Purchases.json */; };
+		E8F062A51D2352DA008BAE9F /* ParsingHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8F062A41D2352DA008BAE9F /* ParsingHelper.swift */; };
+		E8F062A71D2362E0008BAE9F /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8F062A61D2362E0008BAE9F /* User.swift */; };
+		E8F062A91D236B47008BAE9F /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8F062A81D236B47008BAE9F /* Account.swift */; };
+		E8F062AB1D258F27008BAE9F /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8F062AA1D258F27008BAE9F /* Product.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,7 +101,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				E8EE14CC1D1A2FF0007ABDE8 /* Locksmith.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -68,12 +108,56 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		16872DDE2D53857B0A078B0E /* Pods_SalesControlTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SalesControlTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2933AB255EF604831A4A6FAB /* Pods_SalesControlUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SalesControlUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		32DBEFB8BD8E3A90D0A93676 /* Pods-SalesControlTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SalesControlTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SalesControlTests/Pods-SalesControlTests.debug.xcconfig"; sourceTree = "<group>"; };
+		3A5B5263B1FAD72E95C0767E /* Pods-SalesControlUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SalesControlUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SalesControlUITests/Pods-SalesControlUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		4B3E6B119A675FF16FA2CF1C /* Pods-SalesControlUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SalesControlUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SalesControlUITests/Pods-SalesControlUITests.release.xcconfig"; sourceTree = "<group>"; };
+		908E29CB1FE22B493A4B66BA /* Pods-SalesControl.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SalesControl.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SalesControl/Pods-SalesControl.debug.xcconfig"; sourceTree = "<group>"; };
+		A8FEC086F86F8BC28BA3DF4F /* Pods-SalesControlTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SalesControlTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SalesControlTests/Pods-SalesControlTests.release.xcconfig"; sourceTree = "<group>"; };
+		B004250112D337F2DEE23216 /* Pods_SalesControl.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SalesControl.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E81C1BB81D1A4AAD006547C6 /* AccountKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AccountKit.framework; sourceTree = "<group>"; };
 		E81C1BB91D1A4AAD006547C6 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
 		E81C1BBA1D1A4AAD006547C6 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
-		E81C1BBF1D1A6823006547C6 /* SaleCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SaleCell.swift; path = Cells/SaleCell.swift; sourceTree = "<group>"; };
-		E81C1BC11D1A6849006547C6 /* SaleCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = SaleCell.xib; path = Cells/SaleCell.xib; sourceTree = "<group>"; };
-		E81C1BC41D1A6ABD006547C6 /* Sale.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Sale.swift; path = Classes/Sale.swift; sourceTree = "<group>"; };
+		E81C1BBF1D1A6823006547C6 /* PurchaseCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PurchaseCell.swift; path = Cells/PurchaseCell.swift; sourceTree = "<group>"; };
+		E81C1BC11D1A6849006547C6 /* PurchaseCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = PurchaseCell.xib; path = Cells/PurchaseCell.xib; sourceTree = "<group>"; };
+		E81C1BC41D1A6ABD006547C6 /* Purchase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Purchase.swift; path = Classes/Purchase.swift; sourceTree = "<group>"; };
+		E81C1BC81D1AF844006547C6 /* Taviraj-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Taviraj-Black.ttf"; sourceTree = "<group>"; };
+		E81C1BC91D1AF844006547C6 /* Taviraj-BlackItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Taviraj-BlackItalic.ttf"; sourceTree = "<group>"; };
+		E81C1BCA1D1AF844006547C6 /* Taviraj-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Taviraj-Bold.ttf"; sourceTree = "<group>"; };
+		E81C1BCB1D1AF844006547C6 /* Taviraj-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Taviraj-BoldItalic.ttf"; sourceTree = "<group>"; };
+		E81C1BCC1D1AF844006547C6 /* Taviraj-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Taviraj-ExtraBold.ttf"; sourceTree = "<group>"; };
+		E81C1BCD1D1AF844006547C6 /* Taviraj-ExtraBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Taviraj-ExtraBoldItalic.ttf"; sourceTree = "<group>"; };
+		E81C1BCE1D1AF844006547C6 /* Taviraj-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Taviraj-ExtraLight.ttf"; sourceTree = "<group>"; };
+		E81C1BCF1D1AF844006547C6 /* Taviraj-ExtraLightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Taviraj-ExtraLightItalic.ttf"; sourceTree = "<group>"; };
+		E81C1BD01D1AF844006547C6 /* Taviraj-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Taviraj-Italic.ttf"; sourceTree = "<group>"; };
+		E81C1BD11D1AF844006547C6 /* Taviraj-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Taviraj-Light.ttf"; sourceTree = "<group>"; };
+		E81C1BD21D1AF844006547C6 /* Taviraj-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Taviraj-LightItalic.ttf"; sourceTree = "<group>"; };
+		E81C1BD31D1AF844006547C6 /* Taviraj-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Taviraj-Medium.ttf"; sourceTree = "<group>"; };
+		E81C1BD41D1AF844006547C6 /* Taviraj-MediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Taviraj-MediumItalic.ttf"; sourceTree = "<group>"; };
+		E81C1BD51D1AF844006547C6 /* Taviraj-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Taviraj-Regular.ttf"; sourceTree = "<group>"; };
+		E81C1BD61D1AF844006547C6 /* Taviraj-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Taviraj-SemiBold.ttf"; sourceTree = "<group>"; };
+		E81C1BD71D1AF844006547C6 /* Taviraj-SemiBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Taviraj-SemiBoldItalic.ttf"; sourceTree = "<group>"; };
+		E81C1BD81D1AF844006547C6 /* Taviraj-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Taviraj-Thin.ttf"; sourceTree = "<group>"; };
+		E81C1BD91D1AF844006547C6 /* Taviraj-ThinItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Taviraj-ThinItalic.ttf"; sourceTree = "<group>"; };
+		E81C1BED1D1B0A31006547C6 /* DataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
+		E875A15A1D1B172600B5676C /* Firebase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Firebase.framework; sourceTree = "<group>"; };
+		E875A15C1D1B17D800B5676C /* libicucore.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libicucore.tbd; path = usr/lib/libicucore.tbd; sourceTree = SDKROOT; };
+		E875A15E1D1B17E300B5676C /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
+		E875A1601D1B17F000B5676C /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		E875A1621D1B17FA00B5676C /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		E875A1641D1B180200B5676C /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		E875A1661D1B1C7900B5676C /* AccountCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountCell.swift; sourceTree = "<group>"; };
+		E875A1681D1B1CA000B5676C /* AccountCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = AccountCell.xib; path = Cells/AccountCell.xib; sourceTree = "<group>"; };
+		E875A16B1D1B21F200B5676C /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		E875A1701D1B4A8D00B5676C /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
+		E875A1721D1B4A9300B5676C /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
+		E875A1751D1B4BE200B5676C /* TwitterAuthHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = TwitterAuthHelper.h; path = TwitterHelper/TwitterAuthHelper.h; sourceTree = "<group>"; };
+		E875A1761D1B4C1B00B5676C /* TwitterAuthHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TwitterAuthHelper.m; path = TwitterHelper/TwitterAuthHelper.m; sourceTree = "<group>"; };
+		E875A1791D1C41CA00B5676C /* PurchasesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PurchasesTableViewController.swift; path = ViewControllers/PurchasesTableViewController.swift; sourceTree = "<group>"; };
+		E875A17B1D1C443500B5676C /* Vendor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Vendor.swift; path = Classes/Vendor.swift; sourceTree = "<group>"; };
+		E87D584F1D1C6B3500F3403B /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MapViewController.swift; path = ViewControllers/MapViewController.swift; sourceTree = "<group>"; };
+		E87D58511D1C86C900F3403B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		E8AE4A481D18F2AE00610C20 /* SalesControl.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SalesControl.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E8AE4A4B1D18F2AE00610C20 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E8AE4A4D1D18F2AE00610C20 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -89,8 +173,14 @@
 		E8AE4A6D1D18F2AE00610C20 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E8AE4A841D1A10DF00610C20 /* SalesControl-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SalesControl-Bridging-Header.h"; sourceTree = "<group>"; };
 		E8AE4A851D1A1F7F00610C20 /* MainNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainNavigationController.swift; sourceTree = "<group>"; };
-		E8EE14C31D1A298C007ABDE8 /* Locksmith.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Locksmith.framework; sourceTree = "<group>"; };
+		E8EE14C31D1A298C007ABDE8 /* Locksmith.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Locksmith.framework; path = /Users/juanbalderas/Documents/JuanC/SalesControl/Locksmith.framework; sourceTree = "<absolute>"; };
 		E8EE14C61D1A29D0007ABDE8 /* MainTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
+		E8F062A21D2351E9008BAE9F /* Purchases.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Purchases.json; sourceTree = "<group>"; };
+		E8F062A41D2352DA008BAE9F /* ParsingHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ParsingHelper.swift; path = Helpers/ParsingHelper.swift; sourceTree = "<group>"; };
+		E8F062A61D2362E0008BAE9F /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = User.swift; path = Classes/User.swift; sourceTree = "<group>"; };
+		E8F062A81D236B47008BAE9F /* Account.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Account.swift; path = Classes/Account.swift; sourceTree = "<group>"; };
+		E8F062AA1D258F27008BAE9F /* Product.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Product.swift; path = Classes/Product.swift; sourceTree = "<group>"; };
+		F02B75763E22B9412631E056 /* Pods-SalesControl.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SalesControl.release.xcconfig"; path = "Pods/Target Support Files/Pods-SalesControl/Pods-SalesControl.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,11 +188,19 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E875A1731D1B4A9300B5676C /* Social.framework in Frameworks */,
+				E875A1711D1B4A8D00B5676C /* Accounts.framework in Frameworks */,
+				E875A1651D1B180200B5676C /* SystemConfiguration.framework in Frameworks */,
+				E875A1631D1B17FA00B5676C /* Security.framework in Frameworks */,
+				E875A1611D1B17F000B5676C /* CFNetwork.framework in Frameworks */,
+				E875A15F1D1B17E300B5676C /* libc++.tbd in Frameworks */,
+				E875A15D1D1B17D800B5676C /* libicucore.tbd in Frameworks */,
 				E81C1BBB1D1A4AAD006547C6 /* AccountKit.framework in Frameworks */,
+				E875A15B1D1B172600B5676C /* Firebase.framework in Frameworks */,
 				E81C1BBC1D1A4AAD006547C6 /* FBSDKCoreKit.framework in Frameworks */,
 				E81C1BBD1D1A4AAD006547C6 /* FBSDKLoginKit.framework in Frameworks */,
 				E8EE14CB1D1A2FF0007ABDE8 /* Locksmith.framework in Frameworks */,
-				E8EE14C41D1A298C007ABDE8 /* Locksmith.framework in Frameworks */,
+				29E2B4EE3998AA2533A550D3 /* Pods_SalesControl.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -110,6 +208,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3CD26FB6F75BEE3C05A2ADD6 /* Pods_SalesControlTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -117,17 +216,33 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1119A5C76800585E5CAC7237 /* Pods_SalesControlUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2CC68BE304D3CF5601FB74B4 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				908E29CB1FE22B493A4B66BA /* Pods-SalesControl.debug.xcconfig */,
+				F02B75763E22B9412631E056 /* Pods-SalesControl.release.xcconfig */,
+				32DBEFB8BD8E3A90D0A93676 /* Pods-SalesControlTests.debug.xcconfig */,
+				A8FEC086F86F8BC28BA3DF4F /* Pods-SalesControlTests.release.xcconfig */,
+				3A5B5263B1FAD72E95C0767E /* Pods-SalesControlUITests.debug.xcconfig */,
+				4B3E6B119A675FF16FA2CF1C /* Pods-SalesControlUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		E81C1BBE1D1A67D1006547C6 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
-				E81C1BBF1D1A6823006547C6 /* SaleCell.swift */,
-				E81C1BC11D1A6849006547C6 /* SaleCell.xib */,
+				E81C1BBF1D1A6823006547C6 /* PurchaseCell.swift */,
+				E81C1BC11D1A6849006547C6 /* PurchaseCell.xib */,
+				E875A1661D1B1C7900B5676C /* AccountCell.swift */,
+				E875A1681D1B1CA000B5676C /* AccountCell.xib */,
 			);
 			name = Cells;
 			sourceTree = "<group>";
@@ -135,7 +250,11 @@
 		E81C1BC31D1A6A9C006547C6 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				E81C1BC41D1A6ABD006547C6 /* Sale.swift */,
+				E81C1BC41D1A6ABD006547C6 /* Purchase.swift */,
+				E875A17B1D1C443500B5676C /* Vendor.swift */,
+				E8F062A61D2362E0008BAE9F /* User.swift */,
+				E8F062A81D236B47008BAE9F /* Account.swift */,
+				E8F062AA1D258F27008BAE9F /* Product.swift */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -148,6 +267,66 @@
 			name = MainNavigationController;
 			sourceTree = "<group>";
 		};
+		E81C1BC71D1AF7DD006547C6 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				E8F062A21D2351E9008BAE9F /* Purchases.json */,
+				E81C1BC81D1AF844006547C6 /* Taviraj-Black.ttf */,
+				E81C1BC91D1AF844006547C6 /* Taviraj-BlackItalic.ttf */,
+				E81C1BCA1D1AF844006547C6 /* Taviraj-Bold.ttf */,
+				E81C1BCB1D1AF844006547C6 /* Taviraj-BoldItalic.ttf */,
+				E81C1BCC1D1AF844006547C6 /* Taviraj-ExtraBold.ttf */,
+				E81C1BCD1D1AF844006547C6 /* Taviraj-ExtraBoldItalic.ttf */,
+				E81C1BCE1D1AF844006547C6 /* Taviraj-ExtraLight.ttf */,
+				E81C1BCF1D1AF844006547C6 /* Taviraj-ExtraLightItalic.ttf */,
+				E81C1BD01D1AF844006547C6 /* Taviraj-Italic.ttf */,
+				E81C1BD11D1AF844006547C6 /* Taviraj-Light.ttf */,
+				E81C1BD21D1AF844006547C6 /* Taviraj-LightItalic.ttf */,
+				E81C1BD31D1AF844006547C6 /* Taviraj-Medium.ttf */,
+				E81C1BD41D1AF844006547C6 /* Taviraj-MediumItalic.ttf */,
+				E81C1BD51D1AF844006547C6 /* Taviraj-Regular.ttf */,
+				E81C1BD61D1AF844006547C6 /* Taviraj-SemiBold.ttf */,
+				E81C1BD71D1AF844006547C6 /* Taviraj-SemiBoldItalic.ttf */,
+				E81C1BD81D1AF844006547C6 /* Taviraj-Thin.ttf */,
+				E81C1BD91D1AF844006547C6 /* Taviraj-ThinItalic.ttf */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		E81C1BEC1D1B0A17006547C6 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				E81C1BED1D1B0A31006547C6 /* DataService.swift */,
+			);
+			name = Services;
+			sourceTree = "<group>";
+		};
+		E875A16A1D1B21E400B5676C /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				E875A16B1D1B21F200B5676C /* Constants.swift */,
+			);
+			name = Util;
+			sourceTree = "<group>";
+		};
+		E875A1741D1B4BA900B5676C /* TwitterHelper */ = {
+			isa = PBXGroup;
+			children = (
+				E875A1751D1B4BE200B5676C /* TwitterAuthHelper.h */,
+				E875A1761D1B4C1B00B5676C /* TwitterAuthHelper.m */,
+			);
+			name = TwitterHelper;
+			sourceTree = "<group>";
+		};
+		E875A1781D1C418D00B5676C /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				E875A1791D1C41CA00B5676C /* PurchasesTableViewController.swift */,
+				E87D584F1D1C6B3500F3403B /* MapViewController.swift */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
 		E8AE4A3F1D18F2AE00610C20 = {
 			isa = PBXGroup;
 			children = (
@@ -156,6 +335,7 @@
 				E8AE4A5F1D18F2AE00610C20 /* SalesControlTests */,
 				E8AE4A6A1D18F2AE00610C20 /* SalesControlUITests */,
 				E8AE4A491D18F2AE00610C20 /* Products */,
+				2CC68BE304D3CF5601FB74B4 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -172,6 +352,11 @@
 		E8AE4A4A1D18F2AE00610C20 /* SalesControl */ = {
 			isa = PBXGroup;
 			children = (
+				E875A1781D1C418D00B5676C /* ViewControllers */,
+				E875A1741D1B4BA900B5676C /* TwitterHelper */,
+				E875A16A1D1B21E400B5676C /* Util */,
+				E81C1BEC1D1B0A17006547C6 /* Services */,
+				E81C1BC71D1AF7DD006547C6 /* Resources */,
 				E81C1BC61D1A6ACC006547C6 /* MainNavigationController */,
 				E81C1BC31D1A6A9C006547C6 /* Classes */,
 				E81C1BBE1D1A67D1006547C6 /* Cells */,
@@ -183,6 +368,8 @@
 				E8AE4A521D18F2AE00610C20 /* Assets.xcassets */,
 				E8AE4A541D18F2AE00610C20 /* LaunchScreen.storyboard */,
 				E8AE4A571D18F2AE00610C20 /* Info.plist */,
+				E87D58511D1C86C900F3403B /* GoogleService-Info.plist */,
+				E8F062A41D2352DA008BAE9F /* ParsingHelper.swift */,
 			);
 			path = SalesControl;
 			sourceTree = "<group>";
@@ -208,10 +395,20 @@
 		E8AE4A7D1D1A0CAF00610C20 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				E875A1721D1B4A9300B5676C /* Social.framework */,
+				E875A1701D1B4A8D00B5676C /* Accounts.framework */,
+				E875A1641D1B180200B5676C /* SystemConfiguration.framework */,
+				E875A1621D1B17FA00B5676C /* Security.framework */,
+				E875A1601D1B17F000B5676C /* CFNetwork.framework */,
+				E875A15E1D1B17E300B5676C /* libc++.tbd */,
+				E875A15C1D1B17D800B5676C /* libicucore.tbd */,
+				E875A15A1D1B172600B5676C /* Firebase.framework */,
 				E81C1BB81D1A4AAD006547C6 /* AccountKit.framework */,
 				E81C1BB91D1A4AAD006547C6 /* FBSDKCoreKit.framework */,
 				E81C1BBA1D1A4AAD006547C6 /* FBSDKLoginKit.framework */,
-				E8EE14C31D1A298C007ABDE8 /* Locksmith.framework */,
+				B004250112D337F2DEE23216 /* Pods_SalesControl.framework */,
+				16872DDE2D53857B0A078B0E /* Pods_SalesControlTests.framework */,
+				2933AB255EF604831A4A6FAB /* Pods_SalesControlUITests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -231,11 +428,15 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E8AE4A701D18F2AE00610C20 /* Build configuration list for PBXNativeTarget "SalesControl" */;
 			buildPhases = (
+				47676605BDCC781DE06C0B72 /* [CP] Check Pods Manifest.lock */,
 				E8AE4A441D18F2AE00610C20 /* Sources */,
 				E8AE4A451D18F2AE00610C20 /* Frameworks */,
 				E8AE4A461D18F2AE00610C20 /* Resources */,
 				E8EE14CA1D1A2F8B007ABDE8 /* CopyFiles */,
 				E8EE14CD1D1A2FF0007ABDE8 /* Embed Frameworks */,
+				8F4B72DDB752E087B2623EA6 /* [CP] Embed Pods Frameworks */,
+				2C58111F47876582B8967B2C /* [CP] Copy Pods Resources */,
+				E875A16F1D1B3A8400B5676C /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -299,6 +500,7 @@
 				TargetAttributes = {
 					E8AE4A471D18F2AE00610C20 = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = 489APTSS85;
 					};
 					E8AE4A5B1D18F2AE00610C20 = {
 						CreatedOnToolsVersion = 7.3.1;
@@ -335,10 +537,31 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E81C1BC21D1A6849006547C6 /* SaleCell.xib in Resources */,
+				E81C1BE41D1AF844006547C6 /* Taviraj-LightItalic.ttf in Resources */,
+				E81C1BE11D1AF844006547C6 /* Taviraj-ExtraLightItalic.ttf in Resources */,
+				E81C1BE01D1AF844006547C6 /* Taviraj-ExtraLight.ttf in Resources */,
+				E81C1BDB1D1AF844006547C6 /* Taviraj-BlackItalic.ttf in Resources */,
+				E81C1BDE1D1AF844006547C6 /* Taviraj-ExtraBold.ttf in Resources */,
+				E875A1691D1B1CA000B5676C /* AccountCell.xib in Resources */,
+				E81C1BE91D1AF844006547C6 /* Taviraj-SemiBoldItalic.ttf in Resources */,
+				E81C1BE71D1AF844006547C6 /* Taviraj-Regular.ttf in Resources */,
+				E81C1BEB1D1AF844006547C6 /* Taviraj-ThinItalic.ttf in Resources */,
+				E81C1BDF1D1AF844006547C6 /* Taviraj-ExtraBoldItalic.ttf in Resources */,
+				E81C1BE81D1AF844006547C6 /* Taviraj-SemiBold.ttf in Resources */,
+				E8F062A31D2351E9008BAE9F /* Purchases.json in Resources */,
+				E81C1BE61D1AF844006547C6 /* Taviraj-MediumItalic.ttf in Resources */,
+				E81C1BDA1D1AF844006547C6 /* Taviraj-Black.ttf in Resources */,
+				E81C1BC21D1A6849006547C6 /* PurchaseCell.xib in Resources */,
 				E8AE4A561D18F2AE00610C20 /* LaunchScreen.storyboard in Resources */,
 				E8AE4A531D18F2AE00610C20 /* Assets.xcassets in Resources */,
 				E8AE4A511D18F2AE00610C20 /* Main.storyboard in Resources */,
+				E87D58521D1C86C900F3403B /* GoogleService-Info.plist in Resources */,
+				E81C1BDC1D1AF844006547C6 /* Taviraj-Bold.ttf in Resources */,
+				E81C1BE21D1AF844006547C6 /* Taviraj-Italic.ttf in Resources */,
+				E81C1BE51D1AF844006547C6 /* Taviraj-Medium.ttf in Resources */,
+				E81C1BDD1D1AF844006547C6 /* Taviraj-BoldItalic.ttf in Resources */,
+				E81C1BEA1D1AF844006547C6 /* Taviraj-Thin.ttf in Resources */,
+				E81C1BE31D1AF844006547C6 /* Taviraj-Light.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -359,6 +582,51 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		2C58111F47876582B8967B2C /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SalesControl/Pods-SalesControl-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		47676605BDCC781DE06C0B72 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		8F4B72DDB752E087B2623EA6 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SalesControl/Pods-SalesControl-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		AA8A6E3A30DEF92A2FF17387 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -419,6 +687,19 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SalesControlUITests/Pods-SalesControlUITests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		E875A16F1D1B3A8400B5676C /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Fabric/run\" a997ddef97f8bd961612ea258fc5d7e07c037b2d d33bf88b62165ff050bce718f8c7147d4c11c276b8539de7802d409049c96e9c";
+		};
 		F8144566229CBA11B4BCDD08 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -442,11 +723,22 @@
 			buildActionMask = 2147483647;
 			files = (
 				E8AE4A861D1A1F7F00610C20 /* MainNavigationController.swift in Sources */,
+				E875A1771D1B4C1B00B5676C /* TwitterAuthHelper.m in Sources */,
+				E875A1671D1B1C7900B5676C /* AccountCell.swift in Sources */,
+				E81C1BEE1D1B0A31006547C6 /* DataService.swift in Sources */,
+				E875A17A1D1C41CA00B5676C /* PurchasesTableViewController.swift in Sources */,
+				E8F062AB1D258F27008BAE9F /* Product.swift in Sources */,
+				E8F062A91D236B47008BAE9F /* Account.swift in Sources */,
 				E8AE4A4E1D18F2AE00610C20 /* ViewController.swift in Sources */,
+				E87D58501D1C6B3500F3403B /* MapViewController.swift in Sources */,
 				E8EE14C71D1A29D0007ABDE8 /* MainTabBarController.swift in Sources */,
-				E81C1BC01D1A6823006547C6 /* SaleCell.swift in Sources */,
-				E81C1BC51D1A6ABD006547C6 /* Sale.swift in Sources */,
+				E8F062A71D2362E0008BAE9F /* User.swift in Sources */,
+				E81C1BC01D1A6823006547C6 /* PurchaseCell.swift in Sources */,
+				E81C1BC51D1A6ABD006547C6 /* Purchase.swift in Sources */,
+				E875A17C1D1C443500B5676C /* Vendor.swift in Sources */,
 				E8AE4A4C1D18F2AE00610C20 /* AppDelegate.swift in Sources */,
+				E8F062A51D2352DA008BAE9F /* ParsingHelper.swift in Sources */,
+				E875A16C1D1B21F200B5676C /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -588,40 +880,53 @@
 		};
 		E8AE4A711D18F2AE00610C20 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 908E29CB1FE22B493A4B66BA /* Pods-SalesControl.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 					"/Users/{username}/Documents/FacebookSDK",
+					"$(PROJECT_DIR)/Pods/Firebase",
 				);
 				INFOPLIST_FILE = SalesControl/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = example.SalesControl;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "SalesControl/SalesControl-Bridging-Header.h";
 			};
 			name = Debug;
 		};
 		E8AE4A721D18F2AE00610C20 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F02B75763E22B9412631E056 /* Pods-SalesControl.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 					"/Users/{username}/Documents/FacebookSDK",
+					"$(PROJECT_DIR)/Pods/Firebase",
 				);
 				INFOPLIST_FILE = SalesControl/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = example.SalesControl;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "SalesControl/SalesControl-Bridging-Header.h";
 			};
 			name = Release;
 		};
 		E8AE4A741D18F2AE00610C20 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 32DBEFB8BD8E3A90D0A93676 /* Pods-SalesControlTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = SalesControlTests/Info.plist;
@@ -634,6 +939,7 @@
 		};
 		E8AE4A751D18F2AE00610C20 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A8FEC086F86F8BC28BA3DF4F /* Pods-SalesControlTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = SalesControlTests/Info.plist;
@@ -646,6 +952,7 @@
 		};
 		E8AE4A771D18F2AE00610C20 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3A5B5263B1FAD72E95C0767E /* Pods-SalesControlUITests.debug.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = SalesControlUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -657,6 +964,7 @@
 		};
 		E8AE4A781D18F2AE00610C20 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4B3E6B119A675FF16FA2CF1C /* Pods-SalesControlUITests.release.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = SalesControlUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
