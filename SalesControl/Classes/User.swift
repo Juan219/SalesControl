@@ -10,6 +10,7 @@ import UIKit
 
 protocol UserPurchaseDelegate {
     func didFindPurchase(purchase:Purchase)
+    func didLoadVendorImage(image: UIImage, forPurchase purchaseId: Int)
     func didFinishLoadingPurchases()
 }
 
@@ -40,33 +41,33 @@ class User: NSObject {
             return id!
         }
         id = NSUUID().UUIDString
+        do {
+        try Locksmith.deleteDataForUserAccount(facebookAccount)
+        try Locksmith.deleteDataForUserAccount(twitterAccount)
+        try Locksmith.deleteDataForUserAccount(googlePlusAccount) }
+        catch {
+            print("Error deleting the account Info")
+        }
 
         return id!
     }
 
     func loadAllPurchases() {
-        do {
-            let purchasesData = getAllPurchasesData()
+        
+        let purchasesData = getAllPurchasesData()
 
-            let purchases = purchasesData["purchase"] as! [[String: AnyObject]]
+        let purchases =  purchasesData["purchase"] as? [AnyObject]
 
-            for purchaseDic in purchases {
-
-                self.purchaseDelegate?.didFindPurchase(Purchase.parsePurchase(purchaseDic))
-
-            }
-
-            self.purchaseDelegate?.didFinishLoadingPurchases()
-
-
-        } catch {
-
-            print("error")
-
+        for purchaseJSON: AnyObject in purchases! {
+            dispatch_sync(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0), {
+                let purchase = Purchase()
+                purchase.delegate = self
+                print("New Purchase")
+                purchase.parsePurchase(purchaseJSON)
+            })
         }
 
     }
-
     private func getAllPurchasesData() -> NSDictionary {
 
         var purchasesData : NSDictionary?
@@ -82,5 +83,34 @@ class User: NSObject {
         return purchasesData!
         
     }
+
+
     
+}
+
+extension User: PurchaseDelegate {
+    func didParsePurchase(purchase: Purchase) {
+        //Return Purchase
+        if !NSThread.isMainThread() {
+            dispatch_async(dispatch_get_main_queue(), {
+                self.purchaseDelegate?.didFindPurchase(purchase)
+            })
+        } else {
+            self.purchaseDelegate?.didFindPurchase(purchase)
+        }
+
+    }
+
+    func didGetImageForVendorImage(vendorImage: UIImage, forPurchase vendorId: Int) {
+        //Return Id
+        if NSThread.isMainThread() {
+                self.purchaseDelegate?.didLoadVendorImage(vendorImage, forPurchase: vendorId)
+            
+        } else {
+            dispatch_async(dispatch_get_main_queue(), {
+                self.purchaseDelegate?.didLoadVendorImage(vendorImage, forPurchase: vendorId)
+            })
+        }
+
+    }
 }

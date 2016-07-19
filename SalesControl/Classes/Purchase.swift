@@ -9,25 +9,59 @@
 import UIKit
 protocol PurchaseDelegate {
     func didParsePurchase(purchase: Purchase)
+    func didGetImageForVendorImage(vendorImage: UIImage, forPurchase vendorId:Int)
 }
 
-class Purchase: NSObject {
+class Purchase: NSObject, ProductDelegate {
     var id: Int?
     var product: Product?
-    var date: NSDate?
+    private let dateFormatter = NSDateFormatter()
+    private var date : NSDate?
+    var delegate: PurchaseDelegate?
 
+    var dateString: String {
+        get {
+            //return String(date!).substringToIndex(String(date!).startIndex.advancedBy(10))
 
+            let string = String(date!)
 
-    class func parsePurchase (data: [String : AnyObject]) -> Purchase {
+            return (string[string.startIndex.advancedBy(5)...string.startIndex.advancedBy(10)]).stringByReplacingOccurrencesOfString("-", withString: "/")
+        }
+        set {
+            dateFormatter.dateFormat = "yyyy-MM-dd"
+            date = dateFormatter.dateFromString(newValue)
+        }
+    }
+
+    func parsePurchase (data: AnyObject) {
+
+        self.id = Int(data["id"] as! String)
+        print(self.id)
+        let product = Product()
         
-        let newPurchase = Purchase()
-
-        newPurchase.id = data["id"] as? Int
-        newPurchase.product = Product.parseProduct(data["product"] as! [String: AnyObject])
-        debugPrint(newPurchase.product.debugDescription)
-        newPurchase.date = data["date"] as? NSDate
+        product.delegate = self
+        product.parseProduct(data["product"] as! [String: AnyObject])
         
-        return newPurchase
+        guard data["date"] != nil else {
+
+            return
+        }
+
+        self.dateString = data["date"] as! String
+
+    }
+
+    func didFinishParsingProduct(product: Product) {
+        //return Product
+        self.product = product
+        print("Finish Parsing purchase:\(self.id)")
+        self.delegate?.didParsePurchase(self)
+
+    }
+
+    func didGetVendorImage(vendorImage: UIImage) {
+        //return Image
+        delegate?.didGetImageForVendorImage(vendorImage, forPurchase: self.id!)
     }
     
 }

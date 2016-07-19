@@ -1,14 +1,167 @@
 {
     "purchase": [{
                  "id": "000001",
-                 "date": "2016-06-25T00:00:00.000Z",
+                 "date": "2016-06-25",
                  "product": {
                  "name": "Agua embotellada",
                  "quantity": "1",
                  "vendor": {
                  "id": "100001",
                  "name": "Oxxo",
-                 "imgURL": "\"www.oxxo.com\"",
+                 "imgURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/Oxxo_Logo.svg/245px-Oxxo_Logo.svg.png",
+                 "socialNetworksURLs": {
+                 "twitter": "www.twitter.com",
+                 "facebook": "www.facebook.com",
+                 "googleplus": "www.googleplus.com"
+                 }
+                 }
+                 }
+                 },{
+                 "id": "000002",
+                 "date": "2016-06-25",
+                 "product": {
+                 "name": "Agua embotellada",
+                 "quantity": "1",
+                 "vendor": {
+                 "id": "100001",
+                 "name": "Oxxo",
+                 "imgURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/7-eleven-brand.svg/2000px-7-eleven-brand.svg.png",
+                 "socialNetworksURLs": {
+                 "twitter": "www.twitter.com",
+                 "facebook": "www.facebook.com",
+                 "googleplus": "www.googleplus.com"
+                 }
+                 }
+                 }
+                 },{
+                 "id": "000003",
+                 "date": "2016-06-25",
+                 "product": {
+                 "name": "Agua embotellada",
+                 "quantity": "1",
+                 "vendor": {
+                 "id": "100001",
+                 "name": "Oxxo",
+                 "imgURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/76/New_Walmart_Logo.svg/250px-New_Walmart_Logo.svg.png",
+                 "socialNetworksURLs": {
+                 "twitter": "www.twitter.com",
+                 "facebook": "www.facebook.com",
+                 "googleplus": "www.googleplus.com"
+                 }
+                 }
+                 }
+                 },{
+                 "id": "000004",
+                 "date": "2016-06-25",
+                 "product": {
+                 "name": "Agua embotellada",
+                 "quantity": "1",
+                 "vendor": {
+                 "id": "100001",
+                 "name": "Oxxo",
+                 "imgURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/Oxxo_Logo.svg/245px-Oxxo_Logo.svg.png",
+                 "socialNetworksURLs": {
+                 "twitter": "www.twitter.com",
+                 "facebook": "www.facebook.com",
+                 "googleplus": "www.googleplus.com"
+                 }
+                 }
+                 }
+                 },{
+                 "id": "000005",
+                 "date": "2016-06-25",
+                 "product": {
+                 "name": "Agua embotellada",
+                 "quantity": "1",
+                 "vendor": {
+                 "id": "100001",
+                 "name": "Oxxo",
+                 "imgURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/Oxxo_Logo.svg/245px-Oxxo_Logo.svg.png",
+                 "socialNetworksURLs": {
+                 "twitter": "www.twitter.com",
+                 "facebook": "www.facebook.com",
+                 "googleplus": "www.googleplus.com"
+                 }
+                 }
+                 }
+                 },{
+                 "id": "000001",
+                 "date": "2016-06-25",
+                 "product": {
+                 "name": "Agua embotellada",
+                 "quantity": "1",
+                 "vendor": {
+                 "id": "100001",
+                 "name": "Oxxo",
+                 "imgURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/Oxxo_Logo.svg/245px-Oxxo_Logo.svg.png",
+                 "socialNetworksURLs": {
+                 "twitter": "www.twitter.com",
+                 "facebook": "www.facebook.com",
+                 "googleplus": "www.googleplus.com"
+                 }
+                 }
+                 }
+                 },{
+                 "id": "000002",
+                 "date": "2016-06-25",
+                 "product": {
+                 "name": "Agua embotellada",
+                 "quantity": "1",
+                 "vendor": {
+                 "id": "100001",
+                 "name": "Oxxo",
+                 "imgURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/7-eleven-brand.svg/2000px-7-eleven-brand.svg.png",
+                 "socialNetworksURLs": {
+                 "twitter": "www.twitter.com",
+                 "facebook": "www.facebook.com",
+                 "googleplus": "www.googleplus.com"
+                 }
+                 }
+                 }
+                 },{
+                 "id": "000003",
+                 "date": "2016-06-25",
+                 "product": {
+                 "name": "Agua embotellada",
+                 "quantity": "1",
+                 "vendor": {
+                 "id": "100001",
+                 "name": "Oxxo",
+                 "imgURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/76/New_Walmart_Logo.svg/250px-New_Walmart_Logo.svg.png",
+                 "socialNetworksURLs": {
+                 "twitter": "www.twitter.com",
+                 "facebook": "www.facebook.com",
+                 "googleplus": "www.googleplus.com"
+                 }
+                 }
+                 }
+                 },{
+                 "id": "000004",
+                 "date": "2016-06-25",
+                 "product": {
+                 "name": "Agua embotellada",
+                 "quantity": "1",
+                 "vendor": {
+                 "id": "100001",
+                 "name": "Oxxo",
+                 "imgURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/Oxxo_Logo.svg/245px-Oxxo_Logo.svg.png",
+                 "socialNetworksURLs": {
+                 "twitter": "www.twitter.com",
+                 "facebook": "www.facebook.com",
+                 "googleplus": "www.googleplus.com"
+                 }
+                 }
+                 }
+                 },{
+                 "id": "000005",
+                 "date": "2016-06-25",
+                 "product": {
+                 "name": "Agua embotellada",
+                 "quantity": "1",
+                 "vendor": {
+                 "id": "100001",
+                 "name": "Oxxo",
+                 "imgURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/Oxxo_Logo.svg/245px-Oxxo_Logo.svg.png",
                  "socialNetworksURLs": {
                  "twitter": "www.twitter.com",
                  "facebook": "www.facebook.com",

@@ -9,7 +9,7 @@
 import UIKit
 import Foundation
 
-let purchaseCellIdentifier = "PURCHASE_CELL"
+let purchaseCellIdentifier = "PurchaseCell"
 
 class PurchasesTableViewController: UITableViewController {
 
@@ -19,14 +19,17 @@ class PurchasesTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        self.tabBarItem.image  = UIImage(named: "app_type_shop_512px_GREY")
         print(User.currentUser().userId())
 
         loadAllPurchases()
 
-        navigationController!.navigationBar.barTintColor = UIColor.darkGrayColor()
+        navigationController!.navigationBar.barTintColor = UIColor.lightGrayColor()
 
         tableView.registerNib(UINib(nibName: "PurchaseCell", bundle: NSBundle.mainBundle()), forCellReuseIdentifier: purchaseCellIdentifier)
+
+        tableView.estimatedRowHeight = 90
+        tableView.rowHeight = UITableViewAutomaticDimension
     }
 
     //MARK: - TableViewsDelegate
@@ -42,23 +45,72 @@ class PurchasesTableViewController: UITableViewController {
         return rows
     }
 
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        //Check the cell
+        print(tableView.frame.width)
+        
+    }
+
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
 
         let cell = tableView.dequeueReusableCellWithIdentifier(purchaseCellIdentifier, forIndexPath: indexPath) as? PurchaseCell
 
         let currentPurchase = purchases![indexPath.row]
 
-
         cell?.productNameLabel.text = currentPurchase.product?.name
-        cell?.dateLabel.text = String(currentPurchase.date)
+        cell?.dateLabel.text = currentPurchase.dateString
         cell?.vendorNameLabel.text = currentPurchase.product?.vendor?.name
-        cell?.quantityLabel.text = String(currentPurchase.product!.quantity!)
+        //cell?.quantityLabel.text = String(currentPurchase.product!.quantity!)
 
-        
+        //cell?.vendorImageImageView.layer.cornerRadius = (cell?.vendorImageImageView.frame.size.width)! / 2
+        //cell?.vendorImageImageView.clipsToBounds = true
+//        guard let currentPurchase.product?.vendor?.img == nil else {
+//
+//            return cell!
+//        }
+
+        cell?.vendorImageImageView.image = currentPurchase.product?.vendor?.img
+
 
         return cell!
     }
 
+    private func getIndexForPurchase(purchaseId:Int) -> Int? {
+
+        //get the index of the purchase based on the purchaseId
+        for purchase in purchases! {
+            if purchase.id == purchaseId {
+                return purchases?.indexOf(purchase)
+            }
+        }
+
+        return nil
+    }
+
+    override func tableView(tableView: UITableView, editActionsForRowAtIndexPath indexPath: NSIndexPath) -> [UITableViewRowAction]? {
+
+        let postFacebook = UITableViewRowAction(style: .Default, title: "Facebook") { (action, indexPath) in
+            //
+        }
+        postFacebook.backgroundColor = UIColor.lightGrayColor()
+
+        //postFacebook.backgroundColor = UIColor.init(patternImage: UIImage(named: "facebook-xl")!)
+
+        let postTwitter = UITableViewRowAction(style: .Default, title: "Twitter") { (action, indexPath) in
+            //
+        }
+
+        //postTwitter.backgroundColor = UIColor.init(patternImage: UIImage(named: "twitter-xxl")!)
+        postTwitter.backgroundColor = UIColor.grayColor()
+        let postGoogle = UITableViewRowAction(style: .Default, title: "Google") { (action, indexPath) in
+            //
+        }
+        postGoogle.backgroundColor = UIColor.darkGrayColor()
+        //postGoogle.backgroundColor = UIColor.init(patternImage: UIImage(named: "google-plus-512")!)
+
+
+        return [postGoogle,postTwitter,postFacebook]
+    }
 
 }
 
@@ -75,23 +127,27 @@ extension PurchasesTableViewController: UserPurchaseDelegate {
 
         purchases = [purchase]
 
-        tableView.reloadData()
+        tableView.insertRowsAtIndexPaths([NSIndexPath(forRow: (purchases?.count)!, inSection: 0)], withRowAnimation: .Automatic)
 
     }
 
     func didFinishLoadingPurchases() {
-        tableView.reloadData()
+        //tableView.reloadData()
     }
 
     func loadAllPurchases() {
 
-        //dispatch_async(dispatch_get_main_queue(), {
         User.currentUser().purchaseDelegate = self
         User.currentUser().loadAllPurchases()
-        //})
-
 
     }
 
+    func didLoadVendorImage(image: UIImage, forPurchase purchaseId: Int) {
+
+        let indexPath = [NSIndexPath(forRow: getIndexForPurchase(purchaseId)!, inSection: 0)]
+
+       self.tableView.reloadRowsAtIndexPaths(indexPath, withRowAnimation: .Automatic)
+
+    }
 
 }

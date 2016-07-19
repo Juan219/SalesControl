@@ -8,23 +8,38 @@
 
 import UIKit
 
-class Product: NSObject {
+protocol ProductDelegate {
+    func didFinishParsingProduct(product: Product)
+    func didGetVendorImage(vendorImage: UIImage)
+}
+
+class Product: NSObject, VendorDelegate {
 
     var name: String?
     var quantity : Int?
     var vendor: Vendor?
 
-    class func parseProduct (data: [String : AnyObject]) -> Product {
+    var delegate: ProductDelegate?
 
-        let newProduct = Product()
+    func parseProduct (data: [String : AnyObject]) {
 
-        newProduct.name = data["name"] as? String
-        newProduct.quantity = Int((data["quantity"] as? String)!)!
-        newProduct.vendor = Vendor.parseVendor(data["vendor"] as! [String: AnyObject])
-        
+        self.name = data["name"] as? String
+        self.quantity = Int((data["quantity"] as? String)!)!
 
-        return newProduct
+        let vendor = Vendor()
+        vendor.delegate = self
+        vendor.parseVendor(data["vendor"] as! [String: AnyObject])
+        self.vendor = vendor
 
+    }
+
+    func didFinishDownloadingVendorImage(image: UIImage) {
+        self.delegate?.didGetVendorImage(image)
+    }
+
+    func didFinishParsingVendor(vendor: Vendor) {
+        self.vendor = vendor
+        self.delegate?.didFinishParsingProduct(self)
     }
 
 }

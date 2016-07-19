@@ -9,19 +9,31 @@
 import UIKit
 
 protocol ParsingHelperDelegate {
-    func didFinishDownloadingImage(image:UIImage, forIndex index:NSIndexPath)
-    //optional func didFinishLoadingAllPurchasesWithError(error:NSError)
+    func didFinishDownloadingImage(image:UIImage)
+    
 }
 
 class ParsingHelper: NSObject {
 
     var delegate: ParsingHelperDelegate?
 
-    func startDownloadingImage(imageUrl: String, atIndex index:NSIndexPath) {
+    func startDownloadingImage(imageUrl: String) {
 
-        let image = UIImage(contentsOfFile: "")
+        var downloadPhotoTask = NSURLSession.sharedSession().downloadTaskWithURL(NSURL(string:imageUrl)!) { (url, response, error) in
 
-        delegate?.didFinishDownloadingImage(image!, forIndex: index)
+            guard error != nil else {
+                return
+            }
+
+            //imageDownloaded
+
+            let image = UIImage(data: NSData(contentsOfURL: url!)!)
+
+            self.delegate?.didFinishDownloadingImage(image!)
+
+        }.resume()
+
+
     }
 
 }

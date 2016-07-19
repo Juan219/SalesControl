@@ -121,32 +121,26 @@
             </objects>
             <point key="canvasLocation" x="491" y="695"/>
         </scene>
-        <!--Item-->
+        <!--Purchases Table View Controller-->
         <scene sceneID="Ncp-Lq-Fth">
             <objects>
                 <tableViewController storyboardIdentifier="SalesTableViewController" id="IPX-uO-rGU" customClass="PurchasesTableViewController" customModule="SalesControl" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="150" sectionHeaderHeight="28" sectionFooterHeight="28" id="kyY-Zx-NIU">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" canCancelContentTouches="NO" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="41" sectionHeaderHeight="28" sectionFooterHeight="28" id="kyY-Zx-NIU">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="QcW-Ed-LBF">
-                                <rect key="frame" x="0.0" y="92" width="600" height="150"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="QcW-Ed-LBF" id="lgq-gX-B9f">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="150"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
+                        <view key="tableFooterView" contentMode="scaleToFill" id="YMu-d4-Wyg">
+                            <rect key="frame" x="0.0" y="64" width="600" height="55"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </view>
                         <connections>
                             <outlet property="dataSource" destination="IPX-uO-rGU" id="kW1-fg-fOT"/>
                             <outlet property="delegate" destination="IPX-uO-rGU" id="oCv-Gv-Zac"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="Item" id="mys-qA-Pcp"/>
+                    <tabBarItem key="tabBarItem" selectedImage="facebook-xl" systemItem="more" id="mys-qA-Pcp"/>
                     <toolbarItems/>
-                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="y74-g3-WwH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -207,6 +201,13 @@
                         <barButtonItem key="leftBarButtonItem" tag="2" systemItem="fastForward" id="nQD-YU-5wI">
                             <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                         </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="AWX-S0-MXQ">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="gav-kx-a6d">
+                                <rect key="frame" x="548" y="6" width="32" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="07_plus-128"/>
+                            </button>
+                        </barButtonItem>
                     </navigationItem>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="SeG-ME-UqZ">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
@@ -242,6 +243,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="07_plus-128" width="128" height="128"/>
         <image name="facebook-xl" width="64" height="64"/>
         <image name="google-plus-512" width="512" height="512"/>
         <image name="twitter-xxl" width="256" height="256"/>
