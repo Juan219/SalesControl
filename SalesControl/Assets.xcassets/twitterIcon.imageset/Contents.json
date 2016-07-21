@@ -2,11 +2,12 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "app_type_shop_512px_GREY.png",
+      "filename" : "twitteripadretina.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
+      "filename" : "twitteriphoneretina.png",
       "scale" : "2x"
     },
     {

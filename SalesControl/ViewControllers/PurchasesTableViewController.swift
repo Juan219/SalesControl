@@ -60,14 +60,6 @@ class PurchasesTableViewController: UITableViewController {
         cell?.productNameLabel.text = currentPurchase.product?.name
         cell?.dateLabel.text = currentPurchase.dateString
         cell?.vendorNameLabel.text = currentPurchase.product?.vendor?.name
-        //cell?.quantityLabel.text = String(currentPurchase.product!.quantity!)
-
-        //cell?.vendorImageImageView.layer.cornerRadius = (cell?.vendorImageImageView.frame.size.width)! / 2
-        //cell?.vendorImageImageView.clipsToBounds = true
-//        guard let currentPurchase.product?.vendor?.img == nil else {
-//
-//            return cell!
-//        }
 
         cell?.vendorImageImageView.image = currentPurchase.product?.vendor?.img
 
@@ -92,7 +84,8 @@ class PurchasesTableViewController: UITableViewController {
         let postFacebook = UITableViewRowAction(style: .Default, title: "Facebook") { (action, indexPath) in
             //
         }
-        postFacebook.backgroundColor = UIColor.lightGrayColor()
+        //postFacebook.backgroundColor = UIColor.lightGrayColor()
+        postFacebook.backgroundColor = UIColor.imageWithBackgroundColor(UIImage(named: "facebookIcon")!.imageRotatedByDegrees(180, flip: false) , bgColor: UIColor.clearColor())
 
         //postFacebook.backgroundColor = UIColor.init(patternImage: UIImage(named: "facebook-xl")!)
 
@@ -101,11 +94,14 @@ class PurchasesTableViewController: UITableViewController {
         }
 
         //postTwitter.backgroundColor = UIColor.init(patternImage: UIImage(named: "twitter-xxl")!)
-        postTwitter.backgroundColor = UIColor.grayColor()
+        //postTwitter.backgroundColor = UIColor.grayColor()
+        postTwitter.backgroundColor = UIColor.imageWithBackgroundColor(UIImage(named: "twitterIcon")!.imageRotatedByDegrees(180, flip: false) , bgColor: UIColor.clearColor())
+
         let postGoogle = UITableViewRowAction(style: .Default, title: "Google") { (action, indexPath) in
             //
         }
-        postGoogle.backgroundColor = UIColor.darkGrayColor()
+        //postGoogle.backgroundColor = UIColor.darkGrayColor()
+        postGoogle.backgroundColor = UIColor.imageWithBackgroundColor(UIImage(named: "googleplusIcon")!.imageRotatedByDegrees(180, flip: false) , bgColor: UIColor.clearColor())
         //postGoogle.backgroundColor = UIColor.init(patternImage: UIImage(named: "google-plus-512")!)
 
 

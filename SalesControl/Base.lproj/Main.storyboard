@@ -50,7 +50,7 @@
                                                     <constraint firstAttribute="height" constant="60" id="9jj-oa-8AF"/>
                                                     <constraint firstAttribute="width" constant="60" id="gDN-pb-enR"/>
                                                 </constraints>
-                                                <state key="normal" title="Button" image="facebook-xl"/>
+                                                <state key="normal" title="Button" image="facebookIcon"/>
                                                 <connections>
                                                     <action selector="FbButtonLoginPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="J6a-SA-fKF"/>
                                                 </connections>
@@ -61,7 +61,7 @@
                                                     <constraint firstAttribute="height" constant="60" id="EMm-uu-PsB"/>
                                                     <constraint firstAttribute="width" constant="60" id="tqn-2c-Qvf"/>
                                                 </constraints>
-                                                <state key="normal" title="Button" image="twitter-xxl"/>
+                                                <state key="normal" title="Button" image="twitterIcon"/>
                                                 <connections>
                                                     <action selector="twitterLoginButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bnc-WV-Rvq"/>
                                                 </connections>
@@ -72,7 +72,7 @@
                                                     <constraint firstAttribute="width" constant="60" id="hNb-Om-AUs"/>
                                                     <constraint firstAttribute="height" constant="60" id="vWS-OC-gyD"/>
                                                 </constraints>
-                                                <state key="normal" image="google-plus-512"/>
+                                                <state key="normal" image="googleplusIcon"/>
                                                 <connections>
                                                     <action selector="googleplusLoginButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WT5-C6-gbR"/>
                                                 </connections>
@@ -139,7 +139,7 @@
                             <outlet property="delegate" destination="IPX-uO-rGU" id="oCv-Gv-Zac"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" selectedImage="facebook-xl" systemItem="more" id="mys-qA-Pcp"/>
+                    <tabBarItem key="tabBarItem" image="facebookIcon" selectedImage="facebookIcon" id="mys-qA-Pcp"/>
                     <toolbarItems/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="y74-g3-WwH" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -244,8 +244,8 @@
     </scenes>
     <resources>
         <image name="07_plus-128" width="128" height="128"/>
-        <image name="facebook-xl" width="64" height="64"/>
-        <image name="google-plus-512" width="512" height="512"/>
-        <image name="twitter-xxl" width="256" height="256"/>
+        <image name="facebookIcon" width="114" height="114"/>
+        <image name="googleplusIcon" width="144" height="144"/>
+        <image name="twitterIcon" width="144" height="144"/>
     </resources>
 </document>

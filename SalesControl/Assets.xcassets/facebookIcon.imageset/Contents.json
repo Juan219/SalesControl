@@ -2,11 +2,12 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "app_type_shop_512px_GREY.png",
+      "filename" : "facebookiphoneretina.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
+      "filename" : "facebbokipadretina.png",
       "scale" : "2x"
     },
     {

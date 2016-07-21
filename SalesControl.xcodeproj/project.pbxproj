@@ -63,6 +63,7 @@
 		E8AE4A861D1A1F7F00610C20 /* MainNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8AE4A851D1A1F7F00610C20 /* MainNavigationController.swift */; };
 		E8EE14C71D1A29D0007ABDE8 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8EE14C61D1A29D0007ABDE8 /* MainTabBarController.swift */; };
 		E8EE14CB1D1A2FF0007ABDE8 /* Locksmith.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E8EE14C31D1A298C007ABDE8 /* Locksmith.framework */; };
+		E8EEBF501D3F526D000394E3 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8EEBF4F1D3F526D000394E3 /* UIColorExtension.swift */; };
 		E8F062A31D2351E9008BAE9F /* Purchases.json in Resources */ = {isa = PBXBuildFile; fileRef = E8F062A21D2351E9008BAE9F /* Purchases.json */; };
 		E8F062A51D2352DA008BAE9F /* ParsingHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8F062A41D2352DA008BAE9F /* ParsingHelper.swift */; };
 		E8F062A71D2362E0008BAE9F /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8F062A61D2362E0008BAE9F /* User.swift */; };
@@ -179,6 +180,7 @@
 		E8AE4A851D1A1F7F00610C20 /* MainNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainNavigationController.swift; sourceTree = "<group>"; };
 		E8EE14C31D1A298C007ABDE8 /* Locksmith.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Locksmith.framework; path = /Users/juanbalderas/Documents/JuanC/SalesControl/Locksmith.framework; sourceTree = "<absolute>"; };
 		E8EE14C61D1A29D0007ABDE8 /* MainTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
+		E8EEBF4F1D3F526D000394E3 /* UIColorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIColorExtension.swift; path = Extensions/UIColorExtension.swift; sourceTree = "<group>"; };
 		E8F062A21D2351E9008BAE9F /* Purchases.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Purchases.json; sourceTree = "<group>"; };
 		E8F062A41D2352DA008BAE9F /* ParsingHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ParsingHelper.swift; path = Helpers/ParsingHelper.swift; sourceTree = "<group>"; };
 		E8F062A61D2362E0008BAE9F /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = User.swift; path = Classes/User.swift; sourceTree = "<group>"; };
@@ -359,6 +361,7 @@
 		E8AE4A4A1D18F2AE00610C20 /* SalesControl */ = {
 			isa = PBXGroup;
 			children = (
+				E8EEBF4E1D3F524D000394E3 /* Extensions */,
 				E875A1781D1C418D00B5676C /* ViewControllers */,
 				E875A1741D1B4BA900B5676C /* TwitterHelper */,
 				E875A16A1D1B21E400B5676C /* Util */,
@@ -425,6 +428,14 @@
 				E8EE14C61D1A29D0007ABDE8 /* MainTabBarController.swift */,
 			);
 			name = MainTabBarController;
+			sourceTree = "<group>";
+		};
+		E8EEBF4E1D3F524D000394E3 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				E8EEBF4F1D3F526D000394E3 /* UIColorExtension.swift */,
+			);
+			name = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -735,6 +746,7 @@
 				E875A17A1D1C41CA00B5676C /* PurchasesTableViewController.swift in Sources */,
 				E8F062AB1D258F27008BAE9F /* Product.swift in Sources */,
 				E8F062A91D236B47008BAE9F /* Account.swift in Sources */,
+				E8EEBF501D3F526D000394E3 /* UIColorExtension.swift in Sources */,
 				E8AE4A4E1D18F2AE00610C20 /* ViewController.swift in Sources */,
 				E87D58501D1C6B3500F3403B /* MapViewController.swift in Sources */,
 				E8EE14C71D1A29D0007ABDE8 /* MainTabBarController.swift in Sources */,
