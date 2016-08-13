@@ -18,18 +18,25 @@ class PurchasesTableViewController: UITableViewController {
     var purchases : [Purchase]?
 
     override func viewDidLoad() {
+
+        self.setNeedsStatusBarAppearanceUpdate()
+        self.preferredStatusBarStyle()
+        
         super.viewDidLoad()
-        self.tabBarItem.image  = UIImage(named: "app_type_shop_512px_GREY")
-        print(User.currentUser().userId())
+
+        let titleDict: NSDictionary = [NSForegroundColorAttributeName: UIColor.whiteColor()]
+        self.navigationController!.navigationBar.titleTextAttributes = titleDict as? [String : AnyObject]
 
         loadAllPurchases()
-
-        navigationController!.navigationBar.barTintColor = UIColor.lightGrayColor()
 
         tableView.registerNib(UINib(nibName: "PurchaseCell", bundle: NSBundle.mainBundle()), forCellReuseIdentifier: purchaseCellIdentifier)
 
         tableView.estimatedRowHeight = 90
         tableView.rowHeight = UITableViewAutomaticDimension
+    }
+
+    override func preferredStatusBarStyle() -> UIStatusBarStyle {
+        return .LightContent
     }
 
     //MARK: - TableViewsDelegate
@@ -82,10 +89,15 @@ class PurchasesTableViewController: UITableViewController {
     override func tableView(tableView: UITableView, editActionsForRowAtIndexPath indexPath: NSIndexPath) -> [UITableViewRowAction]? {
 
         let postFacebook = UITableViewRowAction(style: .Default, title: "Facebook") { (action, indexPath) in
-            //
+            //Open postingView for facebook
+            let postingFacebook = PostingViewController()
+
+            //performSegueWithIdentifier(<#T##identifier: String##String#>, sender: <#T##AnyObject?#>)
+
+            //self.presentViewController(postingFacebook, animated: true, completion: nil)
         }
-        //postFacebook.backgroundColor = UIColor.lightGrayColor()
-        postFacebook.backgroundColor = UIColor.imageWithBackgroundColor(UIImage(named: "facebookIcon")!.imageRotatedByDegrees(180, flip: false) , bgColor: UIColor.clearColor())
+        postFacebook.backgroundColor = UIColor.lightGrayColor()
+        //postFacebook.backgroundColor = UIColor.imageWithBackgroundColor(UIImage(named: "facebookIcon")!.imageRotatedByDegrees(180, flip: false) , bgColor: UIColor.clearColor())
 
         //postFacebook.backgroundColor = UIColor.init(patternImage: UIImage(named: "facebook-xl")!)
 
@@ -94,14 +106,14 @@ class PurchasesTableViewController: UITableViewController {
         }
 
         //postTwitter.backgroundColor = UIColor.init(patternImage: UIImage(named: "twitter-xxl")!)
-        //postTwitter.backgroundColor = UIColor.grayColor()
-        postTwitter.backgroundColor = UIColor.imageWithBackgroundColor(UIImage(named: "twitterIcon")!.imageRotatedByDegrees(180, flip: false) , bgColor: UIColor.clearColor())
+        postTwitter.backgroundColor = UIColor.grayColor()
+        //postTwitter.backgroundColor = UIColor.imageWithBackgroundColor(UIImage(named: "twitterIcon")!.imageRotatedByDegrees(180, flip: false) , bgColor: UIColor.clearColor())
 
         let postGoogle = UITableViewRowAction(style: .Default, title: "Google") { (action, indexPath) in
             //
         }
-        //postGoogle.backgroundColor = UIColor.darkGrayColor()
-        postGoogle.backgroundColor = UIColor.imageWithBackgroundColor(UIImage(named: "googleplusIcon")!.imageRotatedByDegrees(180, flip: false) , bgColor: UIColor.clearColor())
+        postGoogle.backgroundColor = UIColor.darkGrayColor()
+        //postGoogle.backgroundColor = UIColor.imageWithBackgroundColor(UIImage(named: "googleplusIcon")!.imageRotatedByDegrees(180, flip: false) , bgColor: UIColor.clearColor())
         //postGoogle.backgroundColor = UIColor.init(patternImage: UIImage(named: "google-plus-512")!)
 
 
@@ -125,10 +137,6 @@ extension PurchasesTableViewController: UserPurchaseDelegate {
 
         tableView.insertRowsAtIndexPaths([NSIndexPath(forRow: (purchases?.count)!, inSection: 0)], withRowAnimation: .Automatic)
 
-    }
-
-    func didFinishLoadingPurchases() {
-        //tableView.reloadData()
     }
 
     func loadAllPurchases() {

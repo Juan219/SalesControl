@@ -11,7 +11,7 @@ import UIKit
 protocol UserPurchaseDelegate {
     func didFindPurchase(purchase:Purchase)
     func didLoadVendorImage(image: UIImage, forPurchase purchaseId: Int)
-    func didFinishLoadingPurchases()
+    //func didFinishLoadingPurchases()
 }
 
 class User: NSObject {
@@ -29,6 +29,12 @@ class User: NSObject {
         return _currentUser
     }
 
+    override init() {
+        super.init()
+        self.loadAccounts()
+
+    }
+
     func userId() -> String {
         // look for the id in the NSUserDefaults
         let defaults = NSUserDefaults.standardUserDefaults()
@@ -41,15 +47,50 @@ class User: NSObject {
             return id!
         }
         id = NSUUID().UUIDString
-        do {
-        try Locksmith.deleteDataForUserAccount(facebookAccount)
-        try Locksmith.deleteDataForUserAccount(twitterAccount)
-        try Locksmith.deleteDataForUserAccount(googlePlusAccount) }
-        catch {
-            print("Error deleting the account Info")
-        }
+        deleteAccounts()
 
         return id!
+    }
+
+    func deleteAccounts() {
+        do {
+            try Locksmith.deleteDataForUserAccount(socialNetworkType.facebook.rawValue)
+            try Locksmith.deleteDataForUserAccount(socialNetworkType.twitter.rawValue)
+            try Locksmith.deleteDataForUserAccount(socialNetworkType.googlePlus.rawValue) }
+        catch let error as NSError {
+            print("Error deleting the account Info: \(error)")
+        }
+    }
+
+    func loadAccounts() {
+        deleteAccounts()
+        self.Accounts = [Account]()
+        //load facebookAccount
+        let fbAccountInfo = Locksmith.loadDataForUserAccount(socialNetworkType.facebook.rawValue)
+        //load twitterAccount
+        let twAccountInfo = Locksmith.loadDataForUserAccount(socialNetworkType.twitter.rawValue)
+        //load googlePlusAccount
+        let gpAccountInfo = Locksmith.loadDataForUserAccount(socialNetworkType.googlePlus.rawValue)
+
+
+        if fbAccountInfo != nil {
+            let fbAccount = Account(type: .facebook, imageURL: (fbAccountInfo!["imgURL"] as? String)!, userName: (fbAccountInfo!["userName"] as? String)!, token: (fbAccountInfo!["token"] as? String)!, email: (fbAccountInfo!["email"] as? String)!)
+            self.Accounts?.append(fbAccount)
+        }
+        if twAccountInfo != nil {
+            let twAccount = Account(type: .twitter, imageURL: (twAccountInfo!["imgURL"] as? String)!, userName: (twAccountInfo!["userName"] as? String)!, token: (twAccountInfo!["token"] as? String)!, email: (twAccountInfo!["email"] as? String)!)
+            self.Accounts?.append(twAccount)
+        }
+        if gpAccountInfo != nil {
+            let imgURL = ((gpAccountInfo!["imgURL"] as? String) != nil) ? gpAccountInfo!["imgURL"] as? String  : ""
+            let userName = ((gpAccountInfo!["userName"] as? String) != nil) ? (gpAccountInfo!["userName"] as? String) : ""
+            let token = ((gpAccountInfo!["token"] as? String) != nil) ? (gpAccountInfo!["token"] as? String) : ""
+            let email = ((gpAccountInfo!["email"] as? String) != nil) ? (gpAccountInfo!["email"] as? String) : ""
+
+            let gpAccount = Account(type: .googlePlus, imageURL: imgURL!, userName: userName!, token: token!, email: email!)
+            self.Accounts?.append(gpAccount)
+        }
+
     }
 
     func loadAllPurchases() {
@@ -84,8 +125,20 @@ class User: NSObject {
         
     }
 
-
-    
+    func isLoggedIn() -> Bool {
+        guard Locksmith.loadDataForUserAccount(facebookAccount) != nil else {
+            guard Locksmith.loadDataForUserAccount(twitterAccount) != nil else {
+                guard Locksmith.loadDataForUserAccount(googlePlusAccount) != nil else {
+                    //let appDelegate = UIApplication.sharedApplication().delegate as? AppDelegate
+                    //appDelegate?.showLoginScreen()
+                    return false
+                }
+                return true
+            }
+            return true
+        }
+        return true
+    }
 }
 
 extension User: PurchaseDelegate {

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -11,13 +11,14 @@
         </mutableArray>
         <mutableArray key="Taviraj-Light.ttf">
             <string>Taviraj-Light</string>
+            <string>Taviraj-Light</string>
         </mutableArray>
     </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" restorationIdentifier="PurchaseCell" id="iN0-l3-epB" customClass="PurchaseCell" customModule="SalesControl" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="596" height="88"/>
+            <rect key="frame" x="0.0" y="0.0" width="596" height="96"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="nnw-9R-sfB">
@@ -44,29 +45,29 @@
                             <rect key="frame" x="90" y="0.0" width="478" height="80"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" misplaced="YES" text="Business Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Udq-Zn-Hi2">
-                                    <rect key="frame" x="0.0" y="0.0" width="478" height="28"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="478" height="25"/>
                                     <fontDescription key="fontDescription" name="Taviraj-Light" family="Taviraj" pointSize="17"/>
                                     <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" misplaced="YES" text="Product" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8yZ-lW-7db">
-                                    <rect key="frame" x="0.0" y="29" width="478" height="30"/>
+                                    <rect key="frame" x="0.0" y="26" width="478" height="30"/>
                                     <fontDescription key="fontDescription" name="Taviraj-ExtraLight" family="Taviraj" pointSize="17"/>
                                     <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kdq-f5-lUQ">
-                                    <rect key="frame" x="0.0" y="60" width="478" height="21"/>
+                                    <rect key="frame" x="0.0" y="56" width="478" height="24"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" misplaced="YES" text="Quantity" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wX3-5X-qoE">
-                                            <rect key="frame" x="0.0" y="0.0" width="239" height="21"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="239" height="24"/>
                                             <fontDescription key="fontDescription" name="Taviraj-ExtraLight" family="Taviraj" pointSize="17"/>
                                             <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="05/06" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="psQ-PX-cef">
-                                            <rect key="frame" x="239" y="0.0" width="239" height="21"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <rect key="frame" x="239" y="0.0" width="239" height="24"/>
+                                            <fontDescription key="fontDescription" name="Taviraj-Light" family="Taviraj" pointSize="14"/>
                                             <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
                                         </label>
@@ -83,16 +84,27 @@
                         <constraint firstAttribute="width" constant="5" id="nEX-pK-OYh"/>
                     </constraints>
                 </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wt9-BX-usP">
+                    <rect key="frame" x="113" y="95" width="483" height="1"/>
+                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="nbI-3S-wTM"/>
+                    </constraints>
+                </view>
             </subviews>
-            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <color key="backgroundColor" red="0.0" green="0.25098040700000002" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
+                <constraint firstItem="wt9-BX-usP" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" constant="-113" id="1U8-6A-7VS"/>
+                <constraint firstAttribute="bottom" secondItem="wt9-BX-usP" secondAttribute="bottom" id="4O6-0M-0MF"/>
                 <constraint firstItem="6bR-lm-yh8" firstAttribute="leading" secondItem="87T-ee-Q9a" secondAttribute="trailing" constant="15" id="BPe-85-Wwh"/>
                 <constraint firstAttribute="bottom" secondItem="nnw-9R-sfB" secondAttribute="bottom" constant="8" id="EI8-xe-3Eb"/>
                 <constraint firstItem="nnw-9R-sfB" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="8" id="GG3-vR-jM0"/>
                 <constraint firstAttribute="bottom" secondItem="87T-ee-Q9a" secondAttribute="bottom" id="L6q-le-Irj"/>
+                <constraint firstAttribute="trailing" secondItem="wt9-BX-usP" secondAttribute="trailing" id="ZkY-hz-MBf"/>
                 <constraint firstItem="87T-ee-Q9a" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="dMV-pr-91L"/>
                 <constraint firstItem="6bR-lm-yh8" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="rvY-fW-eax"/>
                 <constraint firstItem="87T-ee-Q9a" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="uPi-On-mFx"/>
+                <constraint firstItem="wt9-BX-usP" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="wIz-jn-ZBp"/>
                 <constraint firstAttribute="trailing" secondItem="nnw-9R-sfB" secondAttribute="trailing" constant="8" id="wru-Ng-ioF"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
@@ -103,7 +115,7 @@
                 <outlet property="vendorImageImageView" destination="6bR-lm-yh8" id="J34-G7-z0M"/>
                 <outlet property="vendorNameLabel" destination="Udq-Zn-Hi2" id="p6y-xs-KBU"/>
             </connections>
-            <point key="canvasLocation" x="634" y="202"/>
+            <point key="canvasLocation" x="634" y="206"/>
         </view>
     </objects>
 </document>

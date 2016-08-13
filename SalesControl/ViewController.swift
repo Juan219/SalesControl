@@ -16,28 +16,64 @@ class ViewController: UIViewController,FBSDKGraphRequestConnectionDelegate, UIAl
     @IBOutlet weak var twitterLoginButton: UIButton!
     @IBOutlet weak var googleplusLoginButton: GIDSignInButton!
 
+    @IBOutlet weak var tableView: UITableView!
+    
+
     var timer : NSTimer?
     private var uuid: String?
+    var requester: RequestHelper?
 
     @IBOutlet weak var doneButton: UIButton!
 
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        UIApplication.sharedApplication().statusBarStyle = .LightContent
         doneButton.layer.borderWidth = 1
         doneButton.layer.borderColor = UIColor.darkGrayColor().CGColor
-
+        //doneButton.hidden = true
 
         GIDSignIn.sharedInstance().delegate = self
         GIDSignIn.sharedInstance().uiDelegate = self
+
+        //TableView
+        self.tableView.delegate = self
+        self.tableView.dataSource = self
 
         //timer = NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: #selector(animateButtons), userInfo: nil, repeats: true)
 
     }
 
+    override func viewWillDisappear(animated: Bool) {
+        UIApplication.sharedApplication().statusBarStyle = .Default
+    }
+
     override func viewWillAppear(animated: Bool) {
-        //animateButtons()
-        //timer?.fire()
+        if (User.currentUser().isLoggedIn() == true) {
+            self.doneButton.hidden = false
+        }
+        User.currentUser().deleteAccounts()
+        animateButtons()
+        checkAccounts()
+
+    }
+
+    func checkAccounts() {
+        for account in User.currentUser().Accounts! {
+            let type = socialNetworkType(rawValue: (account.type?.rawValue)!)
+            switch type! {
+            case .facebook :
+                self.facebookLoginButton.hidden = true
+                break
+            case .twitter:
+                self.twitterLoginButton.hidden = true
+                break
+            case .googlePlus:
+                self.googleplusLoginButton.hidden = true
+                break
+                //
+            }
+        }
     }
 
 
@@ -67,11 +103,29 @@ class ViewController: UIViewController,FBSDKGraphRequestConnectionDelegate, UIAl
         // Dispose of any resources that can be recreated.
     }
     @IBAction func doneButtonPressed(sender: AnyObject) {
-        dismissViewControllerAnimated(true, completion: nil)
+        //Check if is logged in with an Account
+        if User.currentUser().isLoggedIn() == true {
+            dismissViewControllerAnimated(true, completion: nil)
+        } else {
+            //self.animate(self.facebookLoginButton)
+        }
+    }
+
+    func animate(button:UIButton) {
+        print(self.view.frame.size.width)
+        print(self.view.frame.size.height)
+        print(button)
+        UIView.animateWithDuration(0.4, animations: {
+            button.frame = CGRectMake(10, 10,60,60)
+            button.hidden = true
+        })
+
+
+        print(button)
+        self.view.layoutIfNeeded()
     }
 
     func loginButtonDidLogOut(loginButton: FBSDKLoginButton!) {
-
         debugPrint("Logging out")
     }
 
@@ -103,24 +157,13 @@ class ViewController: UIViewController,FBSDKGraphRequestConnectionDelegate, UIAl
                     } else {
                         // User logged in!
                         debugPrint(accounts)
-                        let twitterData = ["token":authData.token]
 
                         let imageURL = authData.providerData["profileImageURL"]! as? String
                         let userName = authData.providerData["username"]! as? String
+                        let email = ""//authData.providerData["email"] as? String
                         let token = authData.token
 
-                        self.saveNewAccount(.facebook, imageURL: imageURL, username: userName, token: token)
-
-                        debugPrint(User.currentUser().Accounts)
-
-                        do {
-                            try Locksmith.saveData(twitterData, forUserAccount: twitterAccount)
-                            debugPrint("Twitter account added")
-
-                        } catch {
-                            debugPrint("Error to save the twitter data")
-                        }
-
+                        self.saveNewAccount(.twitter, imageURL: imageURL, username: userName, token: token,email: email)
                     }
                 })
             }
@@ -145,24 +188,15 @@ class ViewController: UIViewController,FBSDKGraphRequestConnectionDelegate, UIAl
                             debugPrint("Login Failed")
                         } else {
                             debugPrint("Logged In \(authData)")
-                            let facebookData = ["token":FBSDKAccessToken.currentAccessToken().tokenString]
 
-                            let imageURL = ""
-                            let userName = ""
-                            let token = ""
+                            let imageURL = authData.providerData["profileImageURL"]! as? String
+                            let userName = authData.providerData["username"]! as? String
+                            let email = authData.providerData["email"] as? String
+                            let token = authData.token
 
-                            self.saveNewAccount(.facebook, imageURL: imageURL, username: userName, token: token)
+                            self.saveNewAccount(.facebook, imageURL: imageURL, username: userName, token: token,email: email)
 
                             debugPrint(User.currentUser().Accounts)
-
-                            //let firebaseData = ["key":authData.uid]
-                            do {
-                                try Locksmith.saveData(facebookData, forUserAccount: facebookAccount)
-                                //try Locksmith.saveData(firebaseData, forUserAccount: firebaseAccount)
-                            } catch {
-                                debugPrint("Error to save the facebook data")
-                            }
-                            self.dismissViewControllerAnimated(true, completion: nil)
                         }
                         
                     })
@@ -181,17 +215,11 @@ extension ViewController: GIDSignInUIDelegate,GIDSignInDelegate {
             // Perform any operations on signed in user here.
             let imageURL = user.profile.imageURLWithDimension(32).absoluteString
             let userName = user.profile.givenName + user.profile.familyName
+            let email = user.profile.email
             let token = user.authentication.accessToken
 
-            saveNewAccount(.googlePlus, imageURL: imageURL, username: userName, token: token)
+            saveNewAccount(.googlePlus, imageURL: imageURL, username: userName, token: token, email: email)
 
-            let googleplusData = ["token":user.authentication.accessToken]
-            do {
-                try Locksmith.saveData(googleplusData, forUserAccount: googlePlusAccount)
-                dismissViewControllerAnimated(true, completion: nil)
-            } catch {
-                debugPrint("Error to save the google plus data")
-            }
         } else {
             debugPrint("\(error.localizedDescription)")
         }
@@ -201,15 +229,74 @@ extension ViewController: GIDSignInUIDelegate,GIDSignInDelegate {
             GIDSignIn.sharedInstance().signIn()
     }
 
-    private func saveNewAccount(type: socialNetworkType, imageURL: String?, username: String?, token: String?) {
-        let account = Account(type: .googlePlus, imageURL: imageURL!, userName: username!, token: token!)
+    private func saveNewAccount(type: socialNetworkType, imageURL: String?, username: String?, token: String?, email:String?) {
+        let account = Account(type: type, imageURL: imageURL!, userName: username!, token: token!,email: email!)
 
         if User.currentUser().Accounts == nil {
             User.currentUser().Accounts = [account]
         } else {
             User.currentUser().Accounts?.append(account)
         }
+        let data: [String:AnyObject] = ["imageURL":imageURL!, "userName":username!,"token":token!,"email":email!,"type":type.rawValue]
+
+        do {
+            let accountData = Locksmith.loadDataForUserAccount(type.rawValue)
+            if accountData != nil {
+                try Locksmith.updateData(data, forUserAccount: type.rawValue)
+            } else {
+                try Locksmith.saveData(data, forUserAccount: type.rawValue)
+            }
+        } catch (let error as NSError) {
+             debugPrint("Error to save the \(type.rawValue) data \(error.localizedDescription)")
+        }
+
+        self.tableView.reloadData()
+    }
+}
+
+extension ViewController:UITableViewDelegate,UITableViewDataSource,RequestHelperDelegate {
+
+    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        return 1
     }
 
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        var rows = 0
+        if (User.currentUser().Accounts != nil) {
+            rows = (User.currentUser().Accounts?.count)!
+        }
+        return  rows
+    }
+
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+
+        let cell: AccountCell = tableView.dequeueReusableCellWithIdentifier("ACCOUNT_CELL") as! AccountCell
+
+        let account = User.currentUser().Accounts![indexPath.row]
+
+        cell.lblSocialNetwork.text = account.type.debugDescription
+        //cell.lblUserEmail.text =
+
+        requester = RequestHelper()
+        requester?.delegate = self
+        requester?.dowloadImageAtURL(account.imageURL!)
+
+        return cell
+
+    }
+
+    func didFinishDownloadingImage(image: UIImage) {
+
+    }
+
+    func didFinishDownloadingImage(image: UIImage, withIndentifier identifier: String) {
+        //get the cell for identifier
+        let cell = self.tableView.cellForRowAtIndexPath(NSIndexPath(forRow: Int(identifier)!, inSection: 0)) as! AccountCell
+
+        cell.imgUserProfile.image = image
+
+    }
 }
+
+
 

@@ -11,6 +11,7 @@ import Alamofire
 
 protocol RequestHelperDelegate {
     func didFinishDownloadingImage(image: UIImage)
+    func didFinishDownloadingImage(image: UIImage, withIndentifier identifier:String)
 }
 
 
@@ -25,10 +26,6 @@ class RequestHelper: NSObject {
 
         let request = NSMutableURLRequest(URL: url)
         request.HTTPMethod = "GET"
-        //request.cachePolicy = NSURLRequestCachePolicy.ReloadIgnoringCacheData
-
-        //let paramString = "data=Hello"
-        //request.HTTPBody = paramString.dataUsingEncoding(NSUTF8StringEncoding)
 
         let task = session.dataTaskWithRequest(request) {
             (
@@ -43,11 +40,34 @@ class RequestHelper: NSObject {
             print("Data String: \(dataString)")
 
             self.delegate?.didFinishDownloadingImage(UIImage(data: data!)!)
-
-
-
         }
 
+        task.resume()
+    }
+
+    func dowloadImageAtURL(url: String, withIdentifier identifier:String) {
+        let url:NSURL = NSURL(string: url)!
+        let session = NSURLSession.sharedSession()
+
+        let request = NSMutableURLRequest(URL: url)
+        request.HTTPMethod = "GET"
+
+        let task = session.dataTaskWithRequest(request) {
+            (
+            let data, let response, let error) in
+
+            guard let _:NSData = data, let _:NSURLResponse = response  where error == nil else {
+                print("error")
+                return
+            }
+
+            let dataString = NSString(data: data!, encoding: NSUTF8StringEncoding)
+            print("Data String: \(dataString)")
+
+            //self.delegate?.didFinishDownloadingImage(UIImage(data: data!)!)
+            self.delegate?.didFinishDownloadingImage(UIImage(data: data!)!, withIndentifier: identifier)
+        }
+        
         task.resume()
     }
 

@@ -10,4 +10,10 @@ import UIKit
 
 class AccountCell: UITableViewCell {
 
+    @IBOutlet weak var imgUserProfile: UIImageView!
+    @IBOutlet weak var lblUserEmail: UILabel!
+    @IBOutlet weak var lblSocialNetwork: UILabel!
+
+    
+
 }

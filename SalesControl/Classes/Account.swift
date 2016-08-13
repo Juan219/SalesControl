@@ -14,7 +14,7 @@ class Account: NSObject {
     var imageURL : String?
     var userName : String?
     var token : String?
-
+    var email: String?
 
     init(type: socialNetworkType, imageURL: String, userName: String, token: String) {
 
@@ -22,6 +22,12 @@ class Account: NSObject {
         self.imageURL = imageURL
         self.userName = userName
         self.token = token
+
+    }
+
+    convenience init(type: socialNetworkType, imageURL: String, userName: String, token: String, email: String) {
+        self.init(type: type, imageURL: imageURL, userName: userName, token: token)
+        self.email = email
     }
 
 }

@@ -35,6 +35,9 @@
 		E81C1BEA1D1AF844006547C6 /* Taviraj-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E81C1BD81D1AF844006547C6 /* Taviraj-Thin.ttf */; };
 		E81C1BEB1D1AF844006547C6 /* Taviraj-ThinItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E81C1BD91D1AF844006547C6 /* Taviraj-ThinItalic.ttf */; };
 		E81C1BEE1D1B0A31006547C6 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E81C1BED1D1B0A31006547C6 /* DataService.swift */; };
+		E82FAE6A1D40C20500D19F4F /* AddPurchaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E82FAE691D40C20500D19F4F /* AddPurchaseViewController.swift */; };
+		E82FAE6C1D40C83600D19F4F /* ILTranslucentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E82FAE6B1D40C83600D19F4F /* ILTranslucentView.swift */; };
+		E84CA2DC1D4C9C4B0053E041 /* PostingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E84CA2DB1D4C9C4B0053E041 /* PostingViewController.swift */; };
 		E84E28A91D3309DD0016BB17 /* RequestHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E84E28A81D3309DD0016BB17 /* RequestHelper.swift */; };
 		E875A15B1D1B172600B5676C /* Firebase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E875A15A1D1B172600B5676C /* Firebase.framework */; };
 		E875A15D1D1B17D800B5676C /* libicucore.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = E875A15C1D1B17D800B5676C /* libicucore.tbd */; };
@@ -43,7 +46,6 @@
 		E875A1631D1B17FA00B5676C /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E875A1621D1B17FA00B5676C /* Security.framework */; };
 		E875A1651D1B180200B5676C /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E875A1641D1B180200B5676C /* SystemConfiguration.framework */; };
 		E875A1671D1B1C7900B5676C /* AccountCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E875A1661D1B1C7900B5676C /* AccountCell.swift */; };
-		E875A1691D1B1CA000B5676C /* AccountCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E875A1681D1B1CA000B5676C /* AccountCell.xib */; };
 		E875A16C1D1B21F200B5676C /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E875A16B1D1B21F200B5676C /* Constants.swift */; };
 		E875A1711D1B4A8D00B5676C /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E875A1701D1B4A8D00B5676C /* Accounts.framework */; };
 		E875A1731D1B4A9300B5676C /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E875A1721D1B4A9300B5676C /* Social.framework */; };
@@ -144,6 +146,9 @@
 		E81C1BD81D1AF844006547C6 /* Taviraj-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Taviraj-Thin.ttf"; sourceTree = "<group>"; };
 		E81C1BD91D1AF844006547C6 /* Taviraj-ThinItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Taviraj-ThinItalic.ttf"; sourceTree = "<group>"; };
 		E81C1BED1D1B0A31006547C6 /* DataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
+		E82FAE691D40C20500D19F4F /* AddPurchaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AddPurchaseViewController.swift; path = ViewControllers/AddPurchaseViewController.swift; sourceTree = "<group>"; };
+		E82FAE6B1D40C83600D19F4F /* ILTranslucentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ILTranslucentView.swift; path = ViewControllers/ILTranslucentView.swift; sourceTree = "<group>"; };
+		E84CA2DB1D4C9C4B0053E041 /* PostingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PostingViewController.swift; path = ViewControllers/PostingViewController.swift; sourceTree = "<group>"; };
 		E84E28A81D3309DD0016BB17 /* RequestHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RequestHelper.swift; path = Classes/RequestHelper.swift; sourceTree = "<group>"; };
 		E875A15A1D1B172600B5676C /* Firebase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Firebase.framework; sourceTree = "<group>"; };
 		E875A15C1D1B17D800B5676C /* libicucore.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libicucore.tbd; path = usr/lib/libicucore.tbd; sourceTree = SDKROOT; };
@@ -152,7 +157,6 @@
 		E875A1621D1B17FA00B5676C /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		E875A1641D1B180200B5676C /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		E875A1661D1B1C7900B5676C /* AccountCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountCell.swift; sourceTree = "<group>"; };
-		E875A1681D1B1CA000B5676C /* AccountCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = AccountCell.xib; path = Cells/AccountCell.xib; sourceTree = "<group>"; };
 		E875A16B1D1B21F200B5676C /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		E875A1701D1B4A8D00B5676C /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
 		E875A1721D1B4A9300B5676C /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
@@ -248,7 +252,6 @@
 				E81C1BBF1D1A6823006547C6 /* PurchaseCell.swift */,
 				E81C1BC11D1A6849006547C6 /* PurchaseCell.xib */,
 				E875A1661D1B1C7900B5676C /* AccountCell.swift */,
-				E875A1681D1B1CA000B5676C /* AccountCell.xib */,
 				E881CF2E1D322216001BFC6A /* DefaultCellTableViewCell.swift */,
 			);
 			name = Cells;
@@ -330,8 +333,11 @@
 		E875A1781D1C418D00B5676C /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				E82FAE6B1D40C83600D19F4F /* ILTranslucentView.swift */,
 				E875A1791D1C41CA00B5676C /* PurchasesTableViewController.swift */,
 				E87D584F1D1C6B3500F3403B /* MapViewController.swift */,
+				E82FAE691D40C20500D19F4F /* AddPurchaseViewController.swift */,
+				E84CA2DB1D4C9C4B0053E041 /* PostingViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -559,7 +565,6 @@
 				E81C1BE01D1AF844006547C6 /* Taviraj-ExtraLight.ttf in Resources */,
 				E81C1BDB1D1AF844006547C6 /* Taviraj-BlackItalic.ttf in Resources */,
 				E81C1BDE1D1AF844006547C6 /* Taviraj-ExtraBold.ttf in Resources */,
-				E875A1691D1B1CA000B5676C /* AccountCell.xib in Resources */,
 				E81C1BE91D1AF844006547C6 /* Taviraj-SemiBoldItalic.ttf in Resources */,
 				E81C1BE71D1AF844006547C6 /* Taviraj-Regular.ttf in Resources */,
 				E81C1BEB1D1AF844006547C6 /* Taviraj-ThinItalic.ttf in Resources */,
@@ -742,6 +747,7 @@
 				E8AE4A861D1A1F7F00610C20 /* MainNavigationController.swift in Sources */,
 				E875A1771D1B4C1B00B5676C /* TwitterAuthHelper.m in Sources */,
 				E875A1671D1B1C7900B5676C /* AccountCell.swift in Sources */,
+				E82FAE6C1D40C83600D19F4F /* ILTranslucentView.swift in Sources */,
 				E81C1BEE1D1B0A31006547C6 /* DataService.swift in Sources */,
 				E875A17A1D1C41CA00B5676C /* PurchasesTableViewController.swift in Sources */,
 				E8F062AB1D258F27008BAE9F /* Product.swift in Sources */,
@@ -751,6 +757,8 @@
 				E87D58501D1C6B3500F3403B /* MapViewController.swift in Sources */,
 				E8EE14C71D1A29D0007ABDE8 /* MainTabBarController.swift in Sources */,
 				E8F062A71D2362E0008BAE9F /* User.swift in Sources */,
+				E84CA2DC1D4C9C4B0053E041 /* PostingViewController.swift in Sources */,
+				E82FAE6A1D40C20500D19F4F /* AddPurchaseViewController.swift in Sources */,
 				E81C1BC01D1A6823006547C6 /* PurchaseCell.swift in Sources */,
 				E81C1BC51D1A6ABD006547C6 /* Purchase.swift in Sources */,
 				E875A17C1D1C443500B5676C /* Vendor.swift in Sources */,

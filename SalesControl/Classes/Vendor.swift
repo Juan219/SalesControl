@@ -9,10 +9,10 @@
 import UIKit
 
 
-enum socialNetworkType {
-    case facebook
-    case twitter
-    case googlePlus
+enum socialNetworkType: String {
+    case facebook = "facebook"
+    case twitter = "twitter"
+    case googlePlus = "googlePlus"
 }
 
 protocol VendorDelegate {
@@ -47,6 +47,10 @@ class Vendor: NSObject, RequestHelperDelegate {
     func didFinishDownloadingImage(image: UIImage) {
         self.img = image
         delegate?.didFinishDownloadingVendorImage(image)
+    }
+
+    func didFinishDownloadingImage(image: UIImage, withIndentifier identifier: String) {
+        //
     }
 
     
