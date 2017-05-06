@@ -9,7 +9,7 @@
 import UIKit
 import Firebase
 import TwitterKit
-import Twitter
+
 
 class ViewController: UIViewController,FBSDKGraphRequestConnectionDelegate, UIAlertViewDelegate {
     @IBOutlet weak var facebookLoginButton: UIButton!
@@ -31,16 +31,20 @@ class ViewController: UIViewController,FBSDKGraphRequestConnectionDelegate, UIAl
         UIApplication.sharedApplication().statusBarStyle = .LightContent
         doneButton.layer.borderWidth = 1
         doneButton.layer.borderColor = UIColor.darkGrayColor().CGColor
+
         //doneButton.hidden = true
 
         GIDSignIn.sharedInstance().delegate = self
         GIDSignIn.sharedInstance().uiDelegate = self
+        GIDSignIn.sharedInstance().scopes = ["https://www.googleapis.com/auth/plus.circles.read","https://www.googleapis.com/auth/plus.circles.write","https://www.googleapis.com/auth/plus.login","https://www.googleapis.com/auth/plus.me","https://www.googleapis.com/auth/plus.profiles.read","https://www.googleapis.com/auth/plus.stream.read","https://www.googleapis.com/auth/plus.stream.write","https://www.googleapis.com/auth/userinfo.email","https://www.googleapis.com/auth/userinfo.profile"]
+
 
         //TableView
         self.tableView.delegate = self
         self.tableView.dataSource = self
-
+        self.view.addSubview(self.tableView)
         //timer = NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: #selector(animateButtons), userInfo: nil, repeats: true)
+
 
     }
 
@@ -49,31 +53,35 @@ class ViewController: UIViewController,FBSDKGraphRequestConnectionDelegate, UIAl
     }
 
     override func viewWillAppear(animated: Bool) {
-        if (User.currentUser().isLoggedIn() == true) {
-            self.doneButton.hidden = false
-        }
-        User.currentUser().deleteAccounts()
         animateButtons()
         checkAccounts()
-
     }
 
     func checkAccounts() {
+        self.facebookLoginButton.hidden = false
+        self.twitterLoginButton.hidden = false
+        self.googleplusLoginButton.hidden = false
+
+
         for account in User.currentUser().Accounts! {
             let type = socialNetworkType(rawValue: (account.type?.rawValue)!)
             switch type! {
             case .facebook :
                 self.facebookLoginButton.hidden = true
+                self.tableView.reloadData()
                 break
             case .twitter:
                 self.twitterLoginButton.hidden = true
+                self.tableView.reloadData()
                 break
             case .googlePlus:
                 self.googleplusLoginButton.hidden = true
+                self.tableView.reloadData()
                 break
                 //
             }
         }
+        self.view.layoutIfNeeded()
     }
 
 
@@ -160,7 +168,7 @@ class ViewController: UIViewController,FBSDKGraphRequestConnectionDelegate, UIAl
 
                         let imageURL = authData.providerData["profileImageURL"]! as? String
                         let userName = authData.providerData["username"]! as? String
-                        let email = ""//authData.providerData["email"] as? String
+                        let email = "";//authData.providerData["email"] as? String
                         let token = authData.token
 
                         self.saveNewAccount(.twitter, imageURL: imageURL, username: userName, token: token,email: email)
@@ -190,7 +198,7 @@ class ViewController: UIViewController,FBSDKGraphRequestConnectionDelegate, UIAl
                             debugPrint("Logged In \(authData)")
 
                             let imageURL = authData.providerData["profileImageURL"]! as? String
-                            let userName = authData.providerData["username"]! as? String
+                            let userName = authData.providerData["displayName"]! as? String
                             let email = authData.providerData["email"] as? String
                             let token = authData.token
 
@@ -237,7 +245,7 @@ extension ViewController: GIDSignInUIDelegate,GIDSignInDelegate {
         } else {
             User.currentUser().Accounts?.append(account)
         }
-        let data: [String:AnyObject] = ["imageURL":imageURL!, "userName":username!,"token":token!,"email":email!,"type":type.rawValue]
+        let data: [String:AnyObject] = [cImageUrl:imageURL!, cUserName:username!,cToken:token!,cEmail:email!,cType:type.rawValue]
 
         do {
             let accountData = Locksmith.loadDataForUserAccount(type.rawValue)
@@ -251,6 +259,8 @@ extension ViewController: GIDSignInUIDelegate,GIDSignInDelegate {
         }
 
         self.tableView.reloadData()
+
+        self.checkAccounts()
     }
 }
 
@@ -265,6 +275,7 @@ extension ViewController:UITableViewDelegate,UITableViewDataSource,RequestHelper
         if (User.currentUser().Accounts != nil) {
             rows = (User.currentUser().Accounts?.count)!
         }
+        NSLog("rows :\(rows)")
         return  rows
     }
 
@@ -274,12 +285,18 @@ extension ViewController:UITableViewDelegate,UITableViewDataSource,RequestHelper
 
         let account = User.currentUser().Accounts![indexPath.row]
 
-        cell.lblSocialNetwork.text = account.type.debugDescription
-        //cell.lblUserEmail.text =
+        cell.lblSocialNetwork.text = account.type!.rawValue
+        cell.lblUserEmail.text = account.userName!
+        cell.imgUserProfile.image = UIImage(named: "googleplusIcon")
 
         requester = RequestHelper()
         requester?.delegate = self
-        requester?.dowloadImageAtURL(account.imageURL!)
+        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0)) {
+            dispatch_async(dispatch_get_main_queue(), {
+                self.requester?.dowloadImageAtURL(account.imageURL!, withIdentifier: "\(indexPath.row)")
+            })
+        }
+
 
         return cell
 
@@ -290,11 +307,26 @@ extension ViewController:UITableViewDelegate,UITableViewDataSource,RequestHelper
     }
 
     func didFinishDownloadingImage(image: UIImage, withIndentifier identifier: String) {
-        //get the cell for identifier
-        let cell = self.tableView.cellForRowAtIndexPath(NSIndexPath(forRow: Int(identifier)!, inSection: 0)) as! AccountCell
 
+        if !NSThread.isMainThread() {
+            dispatch_async(dispatch_get_main_queue(),{
+                self.reloadImage(image, withIndentifier: identifier)
+            })
+        } else {
+            reloadImage(image, withIndentifier: identifier)
+        }
+    }
+
+    private func reloadImage(image: UIImage, withIndentifier identifier: String) {
+
+        let indexPath = NSIndexPath(forRow: Int(identifier)!, inSection: 0)
+        let cell = self.tableView.cellForRowAtIndexPath(indexPath) as! AccountCell
+        cell.stopAnimating()
         cell.imgUserProfile.image = image
+    }
 
+    func getImage(Account:socialNetworkType) {
+        
     }
 }
 

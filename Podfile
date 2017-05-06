@@ -6,13 +6,16 @@ target 'SalesControl' do
   use_frameworks!
 
   # Pods for SalesControl
-  pod 'Locksmith'
+  #pod 'Locksmith'
+  pod 'Locksmith', :git => 'https://github.com/matthewpalmer/Locksmith.git', :branch => 'swift-2.3'
   pod 'Fabric'
   pod 'TwitterKit'
   pod 'TwitterCore'
   pod 'GoogleMaps'
   pod 'Google/SignIn'
-  pod 'Alamofire', '~> 3.4'
+  pod 'GooglePlaces'
+  #pod 'GooglePlaces', '~> 1.0.5'
+  pod 'Alamofire', '~> 3.5'
 
   target 'SalesControlTests' do
     inherit! :search_paths

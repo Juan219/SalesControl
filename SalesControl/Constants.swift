@@ -11,12 +11,23 @@ import Foundation
 let KEY_UID = "uid"
 let defaults = NSUserDefaults.standardUserDefaults()
 
+let googlePath = NSBundle.mainBundle().pathForResource("GoogleService-Info", ofType: "plist")
+let dict = NSDictionary(contentsOfFile: googlePath!)
+
+//.plist values
+let googleAPIKey = dict?.valueForKey("API_KEY")
+
 //MARK: - Accounts
 let facebookAccount = "facebook"
 let twitterAccount = "twitter"
 let googlePlusAccount = "googlePlus"
 let firebaseAccount = "firebase"
-
+//MARK: - StoreData Constants
+let cUserName = "userName"
+let cToken = "token"
+let cEmail = "email"
+let cType = "type"
+let cImageUrl = "imageURL"
 //MARK: - Colors
 
 //Negro

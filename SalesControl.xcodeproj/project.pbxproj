@@ -37,6 +37,11 @@
 		E81C1BEE1D1B0A31006547C6 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E81C1BED1D1B0A31006547C6 /* DataService.swift */; };
 		E82FAE6A1D40C20500D19F4F /* AddPurchaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E82FAE691D40C20500D19F4F /* AddPurchaseViewController.swift */; };
 		E82FAE6C1D40C83600D19F4F /* ILTranslucentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E82FAE6B1D40C83600D19F4F /* ILTranslucentView.swift */; };
+		E83F16861DE0F87A0069BD30 /* City.swift in Sources */ = {isa = PBXBuildFile; fileRef = E83F16851DE0F87A0069BD30 /* City.swift */; };
+		E83F16881DE0F9D50069BD30 /* BusinessCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E83F16871DE0F9D50069BD30 /* BusinessCell.swift */; };
+		E83F168A1DE25F9A0069BD30 /* SocialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E83F16891DE25F9A0069BD30 /* SocialViewController.swift */; };
+		E843A5A51DE0E83F004751CD /* BusinessListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E843A5A41DE0E83F004751CD /* BusinessListViewController.swift */; };
+		E843A5A71DE0E875004751CD /* Business.swift in Sources */ = {isa = PBXBuildFile; fileRef = E843A5A61DE0E875004751CD /* Business.swift */; };
 		E84CA2DC1D4C9C4B0053E041 /* PostingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E84CA2DB1D4C9C4B0053E041 /* PostingViewController.swift */; };
 		E84E28A91D3309DD0016BB17 /* RequestHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E84E28A81D3309DD0016BB17 /* RequestHelper.swift */; };
 		E875A15B1D1B172600B5676C /* Firebase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E875A15A1D1B172600B5676C /* Firebase.framework */; };
@@ -71,6 +76,8 @@
 		E8F062A71D2362E0008BAE9F /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8F062A61D2362E0008BAE9F /* User.swift */; };
 		E8F062A91D236B47008BAE9F /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8F062A81D236B47008BAE9F /* Account.swift */; };
 		E8F062AB1D258F27008BAE9F /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8F062AA1D258F27008BAE9F /* Product.swift */; };
+		E8F2E2DB1D713C4E0083EA04 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E8F2E2DA1D713C4E0083EA04 /* AVFoundation.framework */; };
+		E8F2E2DD1D7396300083EA04 /* Colors.plist in Resources */ = {isa = PBXBuildFile; fileRef = E8F2E2DC1D7396300083EA04 /* Colors.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -148,6 +155,11 @@
 		E81C1BED1D1B0A31006547C6 /* DataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 		E82FAE691D40C20500D19F4F /* AddPurchaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AddPurchaseViewController.swift; path = ViewControllers/AddPurchaseViewController.swift; sourceTree = "<group>"; };
 		E82FAE6B1D40C83600D19F4F /* ILTranslucentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ILTranslucentView.swift; path = ViewControllers/ILTranslucentView.swift; sourceTree = "<group>"; };
+		E83F16851DE0F87A0069BD30 /* City.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = City.swift; path = Classes/City.swift; sourceTree = "<group>"; };
+		E83F16871DE0F9D50069BD30 /* BusinessCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BusinessCell.swift; path = Cells/BusinessCell.swift; sourceTree = "<group>"; };
+		E83F16891DE25F9A0069BD30 /* SocialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SocialViewController.swift; path = ViewControllers/SocialViewController.swift; sourceTree = "<group>"; };
+		E843A5A41DE0E83F004751CD /* BusinessListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BusinessListViewController.swift; path = ViewControllers/BusinessListViewController.swift; sourceTree = "<group>"; };
+		E843A5A61DE0E875004751CD /* Business.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Business.swift; path = Classes/Business.swift; sourceTree = "<group>"; };
 		E84CA2DB1D4C9C4B0053E041 /* PostingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PostingViewController.swift; path = ViewControllers/PostingViewController.swift; sourceTree = "<group>"; };
 		E84E28A81D3309DD0016BB17 /* RequestHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RequestHelper.swift; path = Classes/RequestHelper.swift; sourceTree = "<group>"; };
 		E875A15A1D1B172600B5676C /* Firebase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Firebase.framework; sourceTree = "<group>"; };
@@ -190,6 +202,8 @@
 		E8F062A61D2362E0008BAE9F /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = User.swift; path = Classes/User.swift; sourceTree = "<group>"; };
 		E8F062A81D236B47008BAE9F /* Account.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Account.swift; path = Classes/Account.swift; sourceTree = "<group>"; };
 		E8F062AA1D258F27008BAE9F /* Product.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Product.swift; path = Classes/Product.swift; sourceTree = "<group>"; };
+		E8F2E2DA1D713C4E0083EA04 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		E8F2E2DC1D7396300083EA04 /* Colors.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Colors.plist; sourceTree = "<group>"; };
 		F02B75763E22B9412631E056 /* Pods-SalesControl.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SalesControl.release.xcconfig"; path = "Pods/Target Support Files/Pods-SalesControl/Pods-SalesControl.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -198,6 +212,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E8F2E2DB1D713C4E0083EA04 /* AVFoundation.framework in Frameworks */,
 				E875A1731D1B4A9300B5676C /* Social.framework in Frameworks */,
 				E875A1711D1B4A8D00B5676C /* Accounts.framework in Frameworks */,
 				E875A1651D1B180200B5676C /* SystemConfiguration.framework in Frameworks */,
@@ -253,6 +268,7 @@
 				E81C1BC11D1A6849006547C6 /* PurchaseCell.xib */,
 				E875A1661D1B1C7900B5676C /* AccountCell.swift */,
 				E881CF2E1D322216001BFC6A /* DefaultCellTableViewCell.swift */,
+				E83F16871DE0F9D50069BD30 /* BusinessCell.swift */,
 			);
 			name = Cells;
 			sourceTree = "<group>";
@@ -267,6 +283,8 @@
 				E8F062AA1D258F27008BAE9F /* Product.swift */,
 				E8F062A41D2352DA008BAE9F /* ParsingHelper.swift */,
 				E84E28A81D3309DD0016BB17 /* RequestHelper.swift */,
+				E843A5A61DE0E875004751CD /* Business.swift */,
+				E83F16851DE0F87A0069BD30 /* City.swift */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -338,6 +356,8 @@
 				E87D584F1D1C6B3500F3403B /* MapViewController.swift */,
 				E82FAE691D40C20500D19F4F /* AddPurchaseViewController.swift */,
 				E84CA2DB1D4C9C4B0053E041 /* PostingViewController.swift */,
+				E843A5A41DE0E83F004751CD /* BusinessListViewController.swift */,
+				E83F16891DE25F9A0069BD30 /* SocialViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -385,6 +405,7 @@
 				E8AE4A541D18F2AE00610C20 /* LaunchScreen.storyboard */,
 				E8AE4A571D18F2AE00610C20 /* Info.plist */,
 				E87D58511D1C86C900F3403B /* GoogleService-Info.plist */,
+				E8F2E2DC1D7396300083EA04 /* Colors.plist */,
 			);
 			path = SalesControl;
 			sourceTree = "<group>";
@@ -410,6 +431,7 @@
 		E8AE4A7D1D1A0CAF00610C20 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				E8F2E2DA1D713C4E0083EA04 /* AVFoundation.framework */,
 				E875A1721D1B4A9300B5676C /* Social.framework */,
 				E875A1701D1B4A8D00B5676C /* Accounts.framework */,
 				E875A1641D1B180200B5676C /* SystemConfiguration.framework */,
@@ -582,6 +604,7 @@
 				E81C1BE21D1AF844006547C6 /* Taviraj-Italic.ttf in Resources */,
 				E81C1BE51D1AF844006547C6 /* Taviraj-Medium.ttf in Resources */,
 				E81C1BDD1D1AF844006547C6 /* Taviraj-BoldItalic.ttf in Resources */,
+				E8F2E2DD1D7396300083EA04 /* Colors.plist in Resources */,
 				E81C1BEA1D1AF844006547C6 /* Taviraj-Thin.ttf in Resources */,
 				E81C1BE31D1AF844006547C6 /* Taviraj-Light.ttf in Resources */,
 			);
@@ -747,6 +770,7 @@
 				E8AE4A861D1A1F7F00610C20 /* MainNavigationController.swift in Sources */,
 				E875A1771D1B4C1B00B5676C /* TwitterAuthHelper.m in Sources */,
 				E875A1671D1B1C7900B5676C /* AccountCell.swift in Sources */,
+				E843A5A71DE0E875004751CD /* Business.swift in Sources */,
 				E82FAE6C1D40C83600D19F4F /* ILTranslucentView.swift in Sources */,
 				E81C1BEE1D1B0A31006547C6 /* DataService.swift in Sources */,
 				E875A17A1D1C41CA00B5676C /* PurchasesTableViewController.swift in Sources */,
@@ -754,8 +778,10 @@
 				E8F062A91D236B47008BAE9F /* Account.swift in Sources */,
 				E8EEBF501D3F526D000394E3 /* UIColorExtension.swift in Sources */,
 				E8AE4A4E1D18F2AE00610C20 /* ViewController.swift in Sources */,
+				E83F16881DE0F9D50069BD30 /* BusinessCell.swift in Sources */,
 				E87D58501D1C6B3500F3403B /* MapViewController.swift in Sources */,
 				E8EE14C71D1A29D0007ABDE8 /* MainTabBarController.swift in Sources */,
+				E843A5A51DE0E83F004751CD /* BusinessListViewController.swift in Sources */,
 				E8F062A71D2362E0008BAE9F /* User.swift in Sources */,
 				E84CA2DC1D4C9C4B0053E041 /* PostingViewController.swift in Sources */,
 				E82FAE6A1D40C20500D19F4F /* AddPurchaseViewController.swift in Sources */,
@@ -764,8 +790,10 @@
 				E875A17C1D1C443500B5676C /* Vendor.swift in Sources */,
 				E84E28A91D3309DD0016BB17 /* RequestHelper.swift in Sources */,
 				E8AE4A4C1D18F2AE00610C20 /* AppDelegate.swift in Sources */,
+				E83F168A1DE25F9A0069BD30 /* SocialViewController.swift in Sources */,
 				E881CF2F1D322216001BFC6A /* DefaultCellTableViewCell.swift in Sources */,
 				E8F062A51D2352DA008BAE9F /* ParsingHelper.swift in Sources */,
+				E83F16861DE0F87A0069BD30 /* City.swift in Sources */,
 				E875A16C1D1B21F200B5676C /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -825,6 +853,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
@@ -863,6 +892,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 2.3;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -871,6 +901,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
@@ -901,6 +932,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_VERSION = 2.3;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -916,9 +948,10 @@
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/",
 					"/Users/{username}/Documents/FacebookSDK",
 					"$(PROJECT_DIR)/Pods/Firebase",
+					"$(PROJECT_DIR)/Pods/Locksmith",
 				);
 				INFOPLIST_FILE = SalesControl/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -926,6 +959,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "SalesControl/SalesControl-Bridging-Header.h";
+				SWIFT_VERSION = 2.3;
 			};
 			name = Debug;
 		};
@@ -939,9 +973,10 @@
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/",
 					"/Users/{username}/Documents/FacebookSDK",
 					"$(PROJECT_DIR)/Pods/Firebase",
+					"$(PROJECT_DIR)/Pods/",
 				);
 				INFOPLIST_FILE = SalesControl/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -949,6 +984,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "SalesControl/SalesControl-Bridging-Header.h";
+				SWIFT_VERSION = 2.3;
 			};
 			name = Release;
 		};

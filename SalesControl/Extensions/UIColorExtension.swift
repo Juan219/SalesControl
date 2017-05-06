@@ -19,16 +19,16 @@ extension UIColor {
 
         let rectangle = CGRect(x: 0, y: 0, width: size.width, height: size.height)
 
-        CGContextSetFillColorWithColor(context, bgColor.CGColor)
-        CGContextAddRect(context, rectangle)
-        CGContextDrawPath(context, .Fill)
+        CGContextSetFillColorWithColor(context!, bgColor.CGColor)
+        CGContextAddRect(context!, rectangle)
+        CGContextDrawPath(context!, .Fill)
 
-        CGContextDrawImage(context, rectangle,  image.CGImage)
+        CGContextDrawImage(context!, rectangle,  image.CGImage!)
 
         let img = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()
         
-        return UIColor(patternImage: img)
+        return UIColor(patternImage: img!)
         
     }
 }
@@ -53,10 +53,10 @@ extension UIImage {
         let bitmap = UIGraphicsGetCurrentContext()
 
         // Move the origin to the middle of the image so we will rotate and scale around the center.
-        CGContextTranslateCTM(bitmap, rotatedSize.width / 2.0, rotatedSize.height / 2.0);
+        CGContextTranslateCTM(bitmap!, rotatedSize.width / 2.0, rotatedSize.height / 2.0);
 
         //   // Rotate the image context
-        CGContextRotateCTM(bitmap, degreesToRadians(degrees));
+        CGContextRotateCTM(bitmap!, degreesToRadians(degrees));
 
         // Now, draw the rotated/scaled image into the context
         var yFlip: CGFloat
@@ -67,12 +67,12 @@ extension UIImage {
             yFlip = CGFloat(1.0)
         }
 
-        CGContextScaleCTM(bitmap, yFlip, -1.0)
-        CGContextDrawImage(bitmap, CGRectMake(-size.width / 2, -size.height / 2, size.width, size.height), CGImage)
+        CGContextScaleCTM(bitmap!, yFlip, -1.0)
+        CGContextDrawImage(bitmap!, CGRectMake(-size.width / 2, -size.height / 2, size.width, size.height), CGImage!)
 
         let newImage = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()
         
-        return newImage
+        return newImage!
     }
 }

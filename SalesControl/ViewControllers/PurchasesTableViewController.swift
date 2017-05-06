@@ -16,6 +16,7 @@ class PurchasesTableViewController: UITableViewController {
     private var internalPurchaseCounter: Int?
 
     var purchases : [Purchase]?
+    var currentEditingPurchase: Purchase?
 
     override func viewDidLoad() {
 
@@ -67,6 +68,7 @@ class PurchasesTableViewController: UITableViewController {
         cell?.productNameLabel.text = currentPurchase.product?.name
         cell?.dateLabel.text = currentPurchase.dateString
         cell?.vendorNameLabel.text = currentPurchase.product?.vendor?.name
+        cell?.backgroundColor = self.tableView.backgroundColor
 
         cell?.vendorImageImageView.image = currentPurchase.product?.vendor?.img
 
@@ -86,23 +88,25 @@ class PurchasesTableViewController: UITableViewController {
         return nil
     }
 
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+
+    }
+
     override func tableView(tableView: UITableView, editActionsForRowAtIndexPath indexPath: NSIndexPath) -> [UITableViewRowAction]? {
 
+        self.currentEditingPurchase = purchases![indexPath.row]
+
         let postFacebook = UITableViewRowAction(style: .Default, title: "Facebook") { (action, indexPath) in
-            //Open postingView for facebook
-            let postingFacebook = PostingViewController()
-
-            //performSegueWithIdentifier(<#T##identifier: String##String#>, sender: <#T##AnyObject?#>)
-
-            //self.presentViewController(postingFacebook, animated: true, completion: nil)
+            self.postForSocialNetwork(.facebook)
         }
         postFacebook.backgroundColor = UIColor.lightGrayColor()
-        //postFacebook.backgroundColor = UIColor.imageWithBackgroundColor(UIImage(named: "facebookIcon")!.imageRotatedByDegrees(180, flip: false) , bgColor: UIColor.clearColor())
+        //(8)postFacebook.backgroundColor = UIColor.imageWithBackgroundColor(UIImage(named: "facebookIcon")!.imageRotatedByDegrees(180, flip: false) , bgColor: UIColor.clearColor())
 
         //postFacebook.backgroundColor = UIColor.init(patternImage: UIImage(named: "facebook-xl")!)
 
         let postTwitter = UITableViewRowAction(style: .Default, title: "Twitter") { (action, indexPath) in
             //
+            self.postForSocialNetwork(.twitter)
         }
 
         //postTwitter.backgroundColor = UIColor.init(patternImage: UIImage(named: "twitter-xxl")!)
@@ -111,6 +115,7 @@ class PurchasesTableViewController: UITableViewController {
 
         let postGoogle = UITableViewRowAction(style: .Default, title: "Google") { (action, indexPath) in
             //
+            self.postForSocialNetwork(.googlePlus)
         }
         postGoogle.backgroundColor = UIColor.darkGrayColor()
         //postGoogle.backgroundColor = UIColor.imageWithBackgroundColor(UIImage(named: "googleplusIcon")!.imageRotatedByDegrees(180, flip: false) , bgColor: UIColor.clearColor())
@@ -151,6 +156,19 @@ extension PurchasesTableViewController: UserPurchaseDelegate {
         let indexPath = [NSIndexPath(forRow: getIndexForPurchase(purchaseId)!, inSection: 0)]
 
        self.tableView.reloadRowsAtIndexPaths(indexPath, withRowAnimation: .Automatic)
+
+    }
+
+    func postForSocialNetwork(socialNetwork:socialNetworkType) {
+        dispatch_async(dispatch_get_main_queue(), {
+            self.tableView.setEditing(false, animated: false)
+            let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+            let posting = storyBoard.instantiateViewControllerWithIdentifier("POSTING_VC") as! PostingViewController
+            posting.modalPresentationStyle = .OverFullScreen
+            posting.purchase = self.currentEditingPurchase
+            posting.socialNetwork = socialNetwork
+            self.presentViewController(posting, animated: false, completion: nil)
+        })
 
     }
 

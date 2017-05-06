@@ -28,5 +28,7 @@ class MainTabBarController: UITabBarController {
         }
      }
 
-
+    @IBAction func deleteAccountButtonPressed(sender: AnyObject) {
+        User.currentUser().deleteAccounts()
+    }
 }

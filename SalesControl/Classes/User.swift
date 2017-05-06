@@ -53,17 +53,24 @@ class User: NSObject {
     }
 
     func deleteAccounts() {
+        for account in self.Accounts! {
+            self.deleteAccount((account.type?.rawValue)!)
+        }
+        self.loadAccounts()
+    }
+
+    func deleteAccount(account:String) {
         do {
-            try Locksmith.deleteDataForUserAccount(socialNetworkType.facebook.rawValue)
-            try Locksmith.deleteDataForUserAccount(socialNetworkType.twitter.rawValue)
-            try Locksmith.deleteDataForUserAccount(socialNetworkType.googlePlus.rawValue) }
+            try Locksmith.deleteDataForUserAccount(account)
+        }
         catch let error as NSError {
             print("Error deleting the account Info: \(error)")
         }
     }
 
     func loadAccounts() {
-        deleteAccounts()
+
+        deleteAccount(socialNetworkType.twitter.rawValue)
         self.Accounts = [Account]()
         //load facebookAccount
         let fbAccountInfo = Locksmith.loadDataForUserAccount(socialNetworkType.facebook.rawValue)
@@ -71,7 +78,6 @@ class User: NSObject {
         let twAccountInfo = Locksmith.loadDataForUserAccount(socialNetworkType.twitter.rawValue)
         //load googlePlusAccount
         let gpAccountInfo = Locksmith.loadDataForUserAccount(socialNetworkType.googlePlus.rawValue)
-
 
         if fbAccountInfo != nil {
             let fbAccount = Account(type: .facebook, imageURL: (fbAccountInfo!["imgURL"] as? String)!, userName: (fbAccountInfo!["userName"] as? String)!, token: (fbAccountInfo!["token"] as? String)!, email: (fbAccountInfo!["email"] as? String)!)
@@ -126,9 +132,9 @@ class User: NSObject {
     }
 
     func isLoggedIn() -> Bool {
-        guard Locksmith.loadDataForUserAccount(facebookAccount) != nil else {
-            guard Locksmith.loadDataForUserAccount(twitterAccount) != nil else {
-                guard Locksmith.loadDataForUserAccount(googlePlusAccount) != nil else {
+        guard Locksmith.loadDataForUserAccount(socialNetworkType.facebook.rawValue) != nil else {
+            guard Locksmith.loadDataForUserAccount(socialNetworkType.twitter.rawValue) != nil else {
+                guard Locksmith.loadDataForUserAccount(socialNetworkType.googlePlus.rawValue) != nil else {
                     //let appDelegate = UIApplication.sharedApplication().delegate as? AppDelegate
                     //appDelegate?.showLoginScreen()
                     return false

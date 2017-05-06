@@ -10,9 +10,9 @@ import UIKit
 
 
 enum socialNetworkType: String {
-    case facebook = "facebook"
-    case twitter = "twitter"
-    case googlePlus = "googlePlus"
+    case facebook = "Facebook"
+    case twitter = "Twitter"
+    case googlePlus = "Google Plus"
 }
 
 protocol VendorDelegate {
